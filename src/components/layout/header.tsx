@@ -8,7 +8,7 @@ const links = [
 
 export default function AppHeader(){
      return (
-          <header className="bg-[#2d5e0d] text-white py-2 px-4 flex justify-between items-center gap-2">
+          <header className="bg-[#2d5e0d] text-white py-2 px-4 flex justify-between items-center gap-2 fixed top-0 left-0 z-20 w-full">
                <Link href="/" title="Վերադառնալ"><Image src="/images/logos/logo.webp" alt="logo" width={250} height={75}/></Link>
                <ul className="flex gap-4 items-center justify-center">
                     {links.map((link,i)=>(

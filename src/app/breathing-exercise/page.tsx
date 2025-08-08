@@ -1,4 +1,4 @@
-import AppLayout from "@/components/layout";
+import ExerciseContent from "@/components/contents/exercise";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,8 +7,6 @@ export const metadata: Metadata = {
 
 export default function BreathingExercisePage() {
      return (
-          <AppLayout>
-               TODO: Make a breathing exercise page
-          </AppLayout>
+          <ExerciseContent/>
      );
 }

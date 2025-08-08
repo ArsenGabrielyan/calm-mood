@@ -148,11 +148,47 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
+@layer utilities {
+  @keyframes growcircle {
+    0% {
+      transform: scale(0.25);
+      box-shadow: 0 0 0 0 theme(--color-primary)
+    }
+    50%{
+      box-shadow: 0 0 30px 10px theme(--color-primary)
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 theme(--color-primary)
+    }
+  }
+
+  @keyframes shrinkcircle {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.25);
+    }
+  }
+
+  .animate-grow-circle {
+    animation: growcircle 3.2s ease-in-out forwards;
+  }
+
+  .animate-shrink-circle {
+    animation: shrinkcircle 3.2s ease-in-out forwards;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+  ::selection{
+    @apply bg-accent text-accent-foreground;
   }
 }

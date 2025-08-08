@@ -1,14 +1,12 @@
-import AppLayout from "@/components/layout";
+import SoundsContent from "@/components/contents/sounds";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Հանգստացնող ձայններ"
+     title: "Հանգստացնող ձայններ"
 }
 
 export default function SoundsPage() {
-  return (
-    <AppLayout>
-      TODO: Make a sounds page
-    </AppLayout>
-  );
+     return (
+          <SoundsContent/>
+     )
 }
