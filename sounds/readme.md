@@ -1,0 +1,13 @@
+# CDN For Calm Mood
+
+This branch (`static-resources`) is used exclusively for hosting public assets via **GitHub Pages**, including:
+- Sounds
+- Other non-code resources
+
+> [!WARNING]
+> This branch is isolated from `main` and **does not contain source code or website logic**.  
+> Do not open pull requests to or from this branch. It’s an independent branch meant for static file delivery.
+
+> [!NOTE]  
+> - This branch is configured with `.nojekyll` to ensure proper serving of all static files.
+> - All files pushed here are considered public.
