@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import {Menu,X} from "lucide-react" // TODO: Make it responsive
 
 const links = [
      {name: "Բոլոր ձայնները", url: "/sounds"},

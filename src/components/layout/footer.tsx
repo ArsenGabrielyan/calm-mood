@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ThemeToggler } from "../theme-changer/theme-toggler";
 import LanguageSwitcher from "../language-switcher";
-import { Button } from "../ui/button";
 
+// TODO: Make it responsive
 export default function AppFooter(){
      const year = new Date().getFullYear();
      return (
