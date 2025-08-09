@@ -50,7 +50,7 @@
   --shadow-lg: 0 1px 3px 0px oklch(0.42 0.12 136.29 / 0.10), 0 4px 6px -1px oklch(0.42 0.12 136.29 / 0.10);
   --shadow-xl: 0 1px 3px 0px oklch(0.42 0.12 136.29 / 0.10), 0 8px 10px -1px oklch(0.42 0.12 136.29 / 0.10);
   --shadow-2xl: 0 1px 3px 0px oklch(0.42 0.12 136.29 / 0.25);
-  
+  --grow-shrink: 5s; --hold: 2.5s;
 }
 
 .dark {
@@ -146,38 +146,29 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
-}
 
-@layer utilities {
-  @keyframes growcircle {
-    0% {
-      transform: scale(0.25);
-      box-shadow: 0 0 0 0 theme(--color-primary)
-    }
-    50%{
-      box-shadow: 0 0 30px 10px theme(--color-primary)
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 theme(--color-primary)
-    }
+  --animate-grow-circle: growCircle var(--grow-shrink) ease-in-out forwards;
+  --animate-shrink-circle: shrinkCircle var(--grow-shrink) ease-in-out forwards;
+  --animate-hold-circle: pulseGlow var(--hold) ease-in-out infinite;
+
+  @keyframes growCircleNoGlow {
+    0% { transform: scale(0.25);}
+    100% { transform: scale(1);}
   }
-
-  @keyframes shrinkcircle {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0.25);
-    }
+  @keyframes growCircle {
+    0% { transform: scale(0.25); box-shadow: 0 0 0 0 transparent;}
+    40% { box-shadow: 0 0 30px 10px var(--color-primary); }
+    70% { box-shadow: 0 0 8px 0 var(--color-primary); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 transparent;}
   }
-
-  .animate-grow-circle {
-    animation: growcircle 3.2s ease-in-out forwards;
+  @keyframes shrinkCircle {
+    0% {transform: scale(1);}
+    100% {transform: scale(0.25);}
   }
-
-  .animate-shrink-circle {
-    animation: shrinkcircle 3.2s ease-in-out forwards;
+  @keyframes pulseGlow{
+    0% { box-shadow: 0 0 0 0 transparent; }
+    50% { box-shadow: 0 0 30px 10px var(--color-secondary); }
+    100% { box-shadow: 0 0 0 0 transparent; }
   }
 }
 
@@ -191,4 +182,20 @@
   ::selection{
     @apply bg-accent text-accent-foreground;
   }
+  ::-webkit-scrollbar{
+    @apply w-3 bg-background
+  }
+  ::-webkit-scrollbar-thumb{
+    @apply bg-linear-to-b from-transparent via-secondary to-primary rounded-md
+  }  
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breathing-root .animate-grow-circle { animation: growCircleNoGlow var(--grow-shrink) linear forwards !important; }
+  .breathing-root :where(*:not(.animate-grow-circle,.animate-shrink-circle),*::before,*::after) {
+    animation: none !important;
+    transition-property: none !important;
+  }
+  .breathing-root .animate-hold-circle { animation: none !important; }
+  .breathing-root .animate-shrink-circle { animation: shrinkCircle var(--grow-shrink) linear forwards !important; }
 }
