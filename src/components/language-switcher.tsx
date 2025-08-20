@@ -6,6 +6,7 @@ import {
      SelectValue
 } from "./ui/select";
 import { CircleFlag } from 'react-circle-flags'
+// TODO: Implement next-intl and make the Language Switcher work
 
 export default function LanguageSwitcher(){
      return (
