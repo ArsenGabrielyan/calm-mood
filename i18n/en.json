@@ -1,26 +1,25 @@
 {
-  "appName": "Calm Mood",
-  "appDescription": "If you are experiencing stress, tension or depression, you're in the right place! Listen and enjoy!",
-  "author": "Arsen G.",
-  "lang": {
-    "code": "en",
-    "countryCode": "us",
-    "name": "English"
+  "index": {
+    "appName": "Calm Mood",
+    "appDescription": "If you are experiencing stress, tension or depression, you're in the right place! Listen and enjoy!",
+    "author": "Arsen G.",
+    "langSwitcherLabel": "Change language",
+    "logo": {
+      "original": "/images/logos/en/logo.webp",
+      "green": "/images/logos/en/logo-green.webp"
+    },
+    "allRightsReserved": "All Rights Reserved",
+    "links": {
+      "sounds": "All Sounds",
+      "exercise": "Breathing Exercise"
+    },
+    "backButton": "Back",
+    "learnMore": "Learn More"
   },
-  "logo": {
-    "original": "/images/logos/logo-en.webp",
-    "green": "/images/logos/logo-green-en.webp"
-  },
-  "allRightsReserved": "All Rights Reserved",
-  "links": {
-    "sounds": "All Sounds",
-    "exercise": "Breathing Exercise"
-  },
-  "backButton": "Back",
-  "learnMore": "Learn More",
   "about": {
     "title": "About Us",
-    "text": "This app helps to calm the human nervous system, creating a spiritually peaceful environment. It awakens a love for nature, helping a person feel calm and harmonious. A person will learn new things about the forest, rivers, birds and other wonders of nature, reconnecting with nature in a new way."
+    "text": "This app helps to calm the human nervous system, creating a spiritually peaceful environment. It awakens a love for nature, helping a person feel calm and harmonious. A person will learn new things about the forest, rivers, birds and other wonders of nature, reconnecting with nature in a new way.",
+    "allSoundsBtn": "All Sounds"
   },
   "features": {
     "title": "Features",
@@ -38,12 +37,14 @@
     },
     "multilang": {
       "title": "Multilingual UI",
-      "description": "Use it in Armenian, English, Russian, or Georgian. More languages will be added soon."
+      "description": "Use it in Armenian, English, Russian, or Georgian languages. More languages will be added soon."
     }
   },
   "notFound": {
     "title": "Page not found",
-    "description": "The page you are looking for cannot be found. You may have entered the address incorrectly, the page has moved, or it may not exist."
+    "description": "The page you are looking for cannot be found. You may have entered the address incorrectly, the page has moved, or it may not exist.",
+    "backButton": "Go Back",
+    "metaTitle": "Oops, this page was not found"
   },
   "breathingExercise": {
     "title": "Breathing Exercise",

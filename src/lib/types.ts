@@ -4,3 +4,8 @@ export interface ISounds{
      icon: string,
      volume: number
 }
+export interface ILanguage{
+     code: string,
+     countryCode: string,
+     label: string
+}

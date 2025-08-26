@@ -1,3 +1,4 @@
+"use client"
 import { 
      Select,
      SelectContent,
@@ -6,32 +7,50 @@ import {
      SelectValue
 } from "./ui/select";
 import { CircleFlag } from 'react-circle-flags'
-// TODO: Implement next-intl and make the Language Switcher work
+import { usePathname, useRouter } from "@/i18n/navigation"
+import { useParams } from "next/navigation";
+import { useTransition } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { languages } from "@/i18n/config";
 
-export default function LanguageSwitcher(){
+interface LangSwitcherSelectProps{
+     children: React.ReactNode,
+     defaultValue: string,
+     label: string
+}
+function LangSwitcherSelect({children,defaultValue,label}: LangSwitcherSelectProps){
+     const router = useRouter();
+     const [isPending, startTransition] = useTransition();
+     const pathname = usePathname();
+     const params = useParams();
+     const onValueChange = (value: string) => startTransition(()=>router.replace(
+          // @ts-expect-error 2353
+          {pathname,params},
+          {locale: value}
+     ))
      return (
-          <Select defaultValue="hy">
+          <Select defaultValue={defaultValue} disabled={isPending} onValueChange={onValueChange}>
                <SelectTrigger>
-                    <SelectValue />
+                    <SelectValue placeholder={label} />
                </SelectTrigger>
                <SelectContent>
-                    <SelectItem value="hy" className="gap-3">
-                         <CircleFlag countryCode="am" className="size-4"/>
-                         Հայերեն
-                    </SelectItem>
-                    <SelectItem value="en" className="gap-3">
-                         <CircleFlag countryCode="us" className="size-4"/>
-                         English
-                    </SelectItem>
-                    <SelectItem value="ru" className="gap-3">
-                         <CircleFlag countryCode="ru" className="size-4"/>
-                         Русский
-                    </SelectItem>
-                    <SelectItem value="ka" className="gap-3">
-                         <CircleFlag countryCode="ge" className="size-4"/>
-                         ქართული
-                    </SelectItem>
+                    {children}
                </SelectContent>
           </Select>
+     )
+}
+
+export default function LanguageSwitcher(){
+     const t = useTranslations("index");
+     const locale = useLocale();
+     return (
+          <LangSwitcherSelect defaultValue={locale} label={t("langSwitcherLabel")}>
+               {languages.map(lang=>(
+                    <SelectItem value={lang.code} key={lang.code} className="gap-3">
+                         <CircleFlag countryCode={lang.countryCode} className="size-4"/>
+                         {lang.label}
+                    </SelectItem>
+               ))}
+          </LangSwitcherSelect>
      )
 }

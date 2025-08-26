@@ -5,19 +5,15 @@ const baseUrls = {
      icons: "/images/icons"
 } as const
 const volumeProps = {volume: 0}
-const soundsMap = {
-     birds: "Թռչուններ",
-     rain: "Անձրև",
-     river: "Գետ",
-     beach: "Ծովափ",
-     train: "Գնացք",
-     thunderstorm: "Ամպրոպ",
-     night: "Գիշեր",
-     lake: "Լճափ",
-} as const
+const soundIds = [
+     "birds", "rain",
+     "river", "beach",
+     "train", "thunderstorm",
+     "night", "lake",
+]
 
-export const sounds: ISounds[] = Object.entries(soundsMap).map(([id,name])=>({
-     name,
+export const sounds: ISounds[] = soundIds.map(id=>({
+     name: `sounds.${id}`,
      icon:`${baseUrls.icons}/${id}.svg`,
      url:`${baseUrls.sounds}/${id}.mp3`,
      ...volumeProps
