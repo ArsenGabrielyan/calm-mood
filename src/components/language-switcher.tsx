@@ -8,7 +8,6 @@ import {
 } from "./ui/select";
 import { CircleFlag } from 'react-circle-flags'
 import { usePathname, useRouter } from "@/i18n/navigation"
-import { useParams } from "next/navigation";
 import { useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { languages } from "@/i18n/config";
@@ -22,10 +21,8 @@ function LangSwitcherSelect({children,defaultValue,label}: LangSwitcherSelectPro
      const router = useRouter();
      const [isPending, startTransition] = useTransition();
      const pathname = usePathname();
-     const params = useParams();
      const onValueChange = (value: string) => startTransition(()=>router.replace(
-          // @ts-expect-error 2353
-          {pathname,params},
+          {pathname},
           {locale: value}
      ))
      return (
