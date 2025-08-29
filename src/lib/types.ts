@@ -4,8 +4,10 @@ export interface ISounds{
      icon: string,
      volume: number
 }
+export type LangCodeType = 'en' | 'hy' | 'ru' | 'ka';
+export type CountryCodeType = 'us' | 'am' | 'ru' | 'ge';
 export interface ILanguage{
-     code: string,
-     countryCode: string,
+     code: LangCodeType,
+     countryCode: CountryCodeType,
      label: string
 }
