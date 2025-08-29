@@ -25,8 +25,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("index");
   return {
     title: {
-      absolute: t("appName"),
-      template: `%s | ${t("appName")}`
+      absolute: `${t("appName")} (beta)`,
+      template: `%s | ${t("appName")} (beta)`
     },
     description: t("appDescription"),
   }
