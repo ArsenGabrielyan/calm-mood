@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import { ThemeProvider } from "@/components/theme-changer/theme-provider";
 import { Raleway } from "next/font/google";
@@ -30,8 +30,23 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s | ${t("appName")} (beta)`
     },
     description: t("appDescription"),
-    alternates: { languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}`])) }
+    alternates: {
+      languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}`]))
+    },
+    authors: {
+       url: "https://github.com/ArsenGabrielyan",
+       name: t("author")
+    },
+    applicationName: t("appName"),
+    icons: {
+      icon: "/app-icon.png",
+      apple: "/app-icon.png"
+    },
   }
+}
+
+export const viewport: Viewport = {
+  themeColor: "#2d5e0d"
 }
 
 interface RootLayoutProps{
