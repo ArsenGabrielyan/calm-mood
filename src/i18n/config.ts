@@ -5,4 +5,7 @@ export const languages = [
      {code: "en", countryCode: "us", label: "English"},
      {code: "ru", countryCode: "ru", label: "Русский"},
      {code: "ka", countryCode: "ge", label: "ქართული"}
-] as readonly ILanguage[]
+] as const satisfies readonly ILanguage[];
+
+export const locales: LangCodeType[] = languages.map(lang=>lang.code);
+export const defaultLocale: LangCodeType = "hy";
