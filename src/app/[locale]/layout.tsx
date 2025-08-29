@@ -39,8 +39,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     applicationName: t("appName"),
     icons: {
-      icon: "/app-icon.png",
-      apple: "/app-icon.png"
+      icon: "/logo192.png",
+      apple: "/logo192.png"
     },
   }
 }
