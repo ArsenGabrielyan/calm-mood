@@ -5,6 +5,7 @@ import { Raleway } from "next/font/google";
 import localFont from 'next/font/local'
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
+import { languages } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 
@@ -29,6 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s | ${t("appName")} (beta)`
     },
     description: t("appDescription"),
+    alternates: { languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}`])) }
   }
 }
 
