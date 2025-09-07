@@ -7,7 +7,7 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
+import { useCurrentTheme } from "@/hooks/use-curr-theme";
 
 const links = [
      {name: "links.sounds", url: "/sounds"},
@@ -19,8 +19,7 @@ export default function AppHeader(){
      const isMobile = useIsMobile()
      const [isOpen, setIsOpen] = useState(false);
      const [isSticky, setIsSticky] = useState(false);
-     const { theme, systemTheme } = useTheme();
-     const currentTheme = theme === "system" ? systemTheme : theme;
+     const currentTheme = useCurrentTheme()
      const logo = useMemo(() => {
           if (!isSticky) return "logo.original";
           return currentTheme === "light" ? "logo.green" : "logo.lime";

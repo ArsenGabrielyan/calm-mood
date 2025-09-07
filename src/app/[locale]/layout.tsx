@@ -39,8 +39,40 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     applicationName: t("appName"),
     icons: {
-      icon: "/app-icon.png",
-      apple: "/app-icon.png"
+      icon: [
+        {
+          media: "(prefers-color-scheme: dark)",
+          url: "/favicon-dark.ico",
+          href: "/favicon-dark.ico"
+        },
+        {
+          media: "(prefers-color-scheme: light)",
+          url: "/favicon.ico",
+          href: "/favicon.ico"
+        },
+        {
+          media: "(prefers-color-scheme: dark)",
+          url: "/app-dark.png",
+          href: "/app-dark.png"
+        },
+        {
+          media: "(prefers-color-scheme: light)",
+          url: "/app-icon.png",
+          href: "/app-icon.png"
+        }
+      ],
+      apple: [
+        {
+          media: "(prefers-color-scheme: dark)",
+          url: "/app-dark.png",
+          href: "/app-dark.png"
+        },
+        {
+          media: "(prefers-color-scheme: light)",
+          url: "/app-icon.png",
+          href: "/app-icon.png"
+        }
+      ],
     },
   }
 }
