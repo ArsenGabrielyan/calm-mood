@@ -6,7 +6,8 @@
     "langSwitcherLabel": "Change language",
     "logo": {
       "original": "/images/logos/en/logo.webp",
-      "green": "/images/logos/en/logo-green.webp"
+      "green": "/images/logos/en/logo-green.webp",
+      "lime": "/images/logos/en/logo-lime.webp"
     },
     "allRightsReserved": "All Rights Reserved",
     "links": {

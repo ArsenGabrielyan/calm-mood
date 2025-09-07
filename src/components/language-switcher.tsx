@@ -5,7 +5,7 @@ import {
      SelectItem,
      SelectTrigger,
      SelectValue
-} from "./ui/select";
+} from "@/components/ui/select";
 import { CircleFlag } from 'react-circle-flags'
 import { usePathname, useRouter } from "@/i18n/navigation"
 import { useTransition } from "react";
