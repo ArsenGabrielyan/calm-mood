@@ -33,6 +33,10 @@
     "eslint-config-next": "15.4.5",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.6",
-    "typescript": "^5"
+    "typescript": "^5",
+    "minimist": "^1.2.8"
+  },
+  "overrides": {
+    "minimist": "^1.2.8"
   }
 }
