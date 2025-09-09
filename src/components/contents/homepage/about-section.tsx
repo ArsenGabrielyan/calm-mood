@@ -4,10 +4,15 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useCurrentTheme } from "@/hooks/use-curr-theme";
+import { useEffect, useState } from "react";
 
 export default function AboutSection(){
      const t = useTranslations("about")
      const currentTheme = useCurrentTheme()
+     const [logo, setLogo] = useState("");
+     useEffect(()=>{
+          setLogo(currentTheme==="dark" ? "/images/logo-dark-aero.png" : "/images/logo-aero.png")
+     },[currentTheme])
      return (
           <section className="bg-background text-foreground p-8 min-h-[40vh] flex justify-center scroll-m-20" id="about">
                <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full gap-8 max-w-6xl">
@@ -18,7 +23,9 @@ export default function AboutSection(){
                               <Link href="/sounds">{t("allSoundsBtn")}</Link>
                          </Button>
                     </div>
-                    <Image src={currentTheme==="dark" ? "/images/logo-dark-aero.png" : "/images/logo-aero.png"} alt="aero-logo" width={275} height={275} className="rounded-md shadow-md"/>
+                    {logo && (
+                         <Image src={logo} alt="aero-logo" width={275} height={275} className="rounded-md shadow-md"/>
+                    )}
                </div>
           </section>
      )
