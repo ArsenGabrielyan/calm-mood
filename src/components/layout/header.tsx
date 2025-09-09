@@ -42,7 +42,7 @@ export default function AppHeader(){
                          {isOpen ? <X className="size-8"/> : <Menu className="size-8"/>}
                     </Button>
                )}
-               <ul className={cn("gap-2 lg:gap-3 items-center justify-center fixed lg:relative transition-all top-[90px] lg:top-0 left-0 w-full lg:w-fit flex-col lg:flex-row p-2 lg:p-0", isMobile && !isOpen ? "hidden" : "flex", isMobile && (isSticky ? "bg-muted text-primary border-b border-accent" : "bg-[#2d5e0d]"))}>
+               <ul className={cn("gap-2 lg:gap-4.5 items-center justify-center fixed lg:relative transition-all top-[90px] lg:top-0 left-0 w-full lg:w-fit flex-col lg:flex-row p-2 lg:p-0", isMobile && !isOpen ? "hidden" : "flex", isMobile && (isSticky ? "bg-muted text-primary border-b border-accent" : "bg-[#2d5e0d]"))}>
                     {links.map((link,i)=>(
                          <li key={`link-${i}`} className="text-base md:text-lg pb-1 border-b-2 border-b-transparent hover:border-b-white capitalize"><Link href={link.url} title={t(link.name)}>{t(link.name)}</Link></li>
                     ))}
