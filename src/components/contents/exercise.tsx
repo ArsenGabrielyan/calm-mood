@@ -37,7 +37,7 @@ export default function ExerciseContent(){
                          <div className="size-72 flex justify-center items-center rounded-full border-2 border-primary will-change-transform">
                               <div className={cn("bg-primary rounded-full size-full",circleType==='growing' ? 'animate-grow-circle' : circleType==='hold' ? 'animate-hold-circle' : 'animate-shrink-circle')}/>
                          </div>
-                         <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-primary" aria-live="polite">{text}</p>
+                         <p className="font-heading text-xl md:text-2xl lg:text-3xl font-semibold text-primary" aria-live="polite">{text}</p>
                     </div>
                </div>
           </AppLayout>

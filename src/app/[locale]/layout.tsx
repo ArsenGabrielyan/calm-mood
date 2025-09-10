@@ -1,20 +1,18 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import { ThemeProvider } from "@/components/theme-changer/theme-provider";
-import { Raleway } from "next/font/google";
-import localFont from 'next/font/local'
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { languages } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Toaster } from "sonner";
+import { Raleway } from "next/font/google";
+import localFont from 'next/font/local'
 
 const kamar = localFont({
   src: "../fonts/kamar.ttf",
   variable: "--font-kamar",
-  fallback: ['Segoe UI','Tahoma','Geneva','Verdana','Arial','Helvetica','sans-serif'],
-  adjustFontFallback: "Arial",
   preload: true
 })
 
