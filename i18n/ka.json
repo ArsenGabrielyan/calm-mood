@@ -54,8 +54,8 @@
     "breatheOut": "ამოსუნთქვა"
   },
   "allSounds": {
-    "title": "დამამშვიდებელი ხმები",
-    "controlButtons": {
+    "page": {
+      "title": "დამამშვიდებელი ხმები",
       "play": "დაკვრა",
       "pause": "პაუზა",
       "stop": "გაჩერება",

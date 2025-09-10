@@ -54,8 +54,8 @@
     "breatheOut": "Выдох"
   },
   "allSounds": {
-    "title": "Расслабляющие звуки",
-    "controlButtons": {
+    "page": {
+      "title": "Расслабляющие звуки",
       "play": "Воспроизвести",
       "pause": "Пауза",
       "stop": "Остановить",

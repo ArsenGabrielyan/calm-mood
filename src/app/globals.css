@@ -191,8 +191,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  
   .breathing-root .animate-grow-circle { animation: growCircleNoGlow var(--grow-shrink) linear forwards !important; }
-  .breathing-root :where(*:not(.animate-grow-circle,.animate-shrink-circle),*::before,*::after) {
+  .breathing-root :where(*:not(.animate-grow-circle,.animate-shrink-circle),*::before,*::after),
+  *:not(.animate-grow-circle,.animate-shrink-circle),*::before,*::after{
     animation: none !important;
     transition-property: none !important;
   }

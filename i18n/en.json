@@ -54,8 +54,8 @@
     "breatheOut": "Breathe Out"
   },
   "allSounds": {
-    "title": "Relaxing Sounds",
-    "controlButtons": {
+    "page": {
+      "title": "Relaxing Sounds",
       "play": "Play",
       "pause": "Pause",
       "stop": "Stop",

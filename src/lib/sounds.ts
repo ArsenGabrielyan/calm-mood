@@ -2,7 +2,6 @@ import { ISounds } from "./types"
 import {Birds, Rain, River, Beach, Train, Thunderstorm, Night, Lake} from "@/icons"
 
 const soundBaseURL = "https://arsengabrielyan.github.io/calm-mood/sounds"
-const volumeProps = {volume: 0}
 const soundIds = [
      "birds", "rain",
      "river", "beach",
@@ -23,8 +22,6 @@ const soundIcons = {
 
 export const sounds: ISounds[] = soundIds.map(id=>({
      id,
-     name: `sounds.${id}`,
      Icon: soundIcons[id],
      url:`${soundBaseURL}/${id}.mp3`,
-     ...volumeProps
 }))

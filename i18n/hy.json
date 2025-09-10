@@ -54,8 +54,8 @@
     "breatheOut": "Արտաշունչ"
   },
   "allSounds": {
-    "title": "Հանգստացնող ձայներ",
-    "controlButtons": {
+    "page": {
+      "title": "Հանգստացնող ձայներ",
       "play": "Նվագել",
       "pause": "Դադարեցնել",
       "stop": "Կանգնեցնել",
