@@ -13,3 +13,4 @@ export interface ILanguage{
       countryCode: CountryCodeType,
       label: string
 }
+export type PlayBackType = "idle" | "playing" | "paused"

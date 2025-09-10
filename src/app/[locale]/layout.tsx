@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { languages } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import { Toaster } from "sonner";
 
 const kamar = localFont({
   src: "../fonts/kamar.ttf",
@@ -108,6 +109,7 @@ export default async function RootLayout({
         >
           <NextIntlClientProvider>
             {children}
+            <Toaster />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

@@ -59,7 +59,8 @@
       "play": "Play",
       "pause": "Pause",
       "stop": "Stop",
-      "resume": "Resume"
+      "resume": "Resume",
+      "errorPlaying": "Unable to play audio"
     },
     "sounds": {
       "birds": "Birds",
