@@ -61,7 +61,7 @@ export default function SoundCard({data, playback, errorMessage}: SoundCardProps
                     <Icon className={cn(finishedLoading ? "fill-primary/25": "fill-primary","size-[85px]")}/>
                </div>
                <div className="w-full flex flex-col items-center justify-between gap-4">
-                    <h2 className="text-2xl sm:text-xl md:text-lg font-semibold text-primary text-center">{t(id)}</h2>
+                    <h2 className="text-3xl md:text-2xl font-semibold text-primary text-center">{t(id)}</h2>
                     <div className="flex items-center gap-2 w-full">
                          {volumeIcon}
                          <Slider defaultValue={[volume]} min={0} max={100} onValueChange={(newVolume)=>setVolume(newVolume[0])}/>

@@ -10,6 +10,33 @@ import { Toaster } from "sonner";
 import { Raleway } from "next/font/google";
 import localFont from 'next/font/local'
 
+const arArchy = localFont({
+  src: [
+    {
+      path: "../fonts/ar-archy/thin.ttf",
+      weight: "100",
+      style: "normal"
+    },
+    {
+      path: "../fonts/ar-archy/extralight.ttf",
+      weight: "200",
+      style: "normal"
+    },
+    {
+      path: "../fonts/ar-archy/regular.ttf",
+      weight: "400",
+      style: "normal"
+    },
+    {
+      path: "../fonts/ar-archy/thin.ttf",
+      weight: "200",
+      style: "normal"
+    },
+  ],
+  variable: "--font-archy",
+  display: "swap"
+})
+
 const kamar = localFont({
   src: "../fonts/kamar.ttf",
   variable: "--font-kamar",
@@ -97,7 +124,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${kamar.variable} ${raleway.variable} antialiased`}
+        className={`${arArchy.variable} ${kamar.variable} ${raleway.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

@@ -17,7 +17,7 @@ export default function SoundsContent(){
      const label = playback === "playing" ? "pause" : playback === "paused" ? "resume" : "play"
      return (
           <AppLayout screenHeight>
-               <h1 className="text-2xl text-center md:text-3xl lg:text-4xl font-semibold">{t("title")}</h1>
+               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] text-center font-semibold">{t("title")}</h1>
                <div className="mt-4 space-y-2 flex justify-center items-center flex-col gap-4 max-w-8xl">
                     <div className="flex items-center gap-3">
                          <Button className="size-14" onClick={handlePlayPause} title={t(label)}>
