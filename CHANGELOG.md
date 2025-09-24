@@ -4,18 +4,20 @@ All notable changes to Calm Mood will be documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## 2.0.0 - TODO: Post a Release Date
+## 2.0.0 - TBA, 2025
 > [!NOTE]
 > This Version Jump includes massive changes in Calm Mood
+### Additions
+- Added 🇬🇪 Georgian Language
+- Implemented Dark Mode
 ### Improvements
-- Updated the layout with new design on all pages (Home, Sounds, Exercise)
+- Updated the layout with new design on all pages (Home, Sounds, Exercise, 404 page)
 - Fixed the Exercise Page Code
 - Moved Sounds to a Separate Branch of this repo
 - Transformed the Design from SCSS to ShadCN UI
 - Converted SVG icons into JSX Icons
-### Additions
-- Added 🇬🇪 Georgian Language
-- Implemented Dark Mode
+- Improved the I18n behavior
+- SEO Optimization
 ### Deletions
 - Removed the Music Player because of Firebase's Recent Change about Cloud Storage
 
@@ -23,6 +25,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Added Sounds
 - Night
 - Lake
+### Deletions
+- Removed "Mixes" Feature because of bugs
 
 ## 1.0.3 - September 2024
 ### Additions

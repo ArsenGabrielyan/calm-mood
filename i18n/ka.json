@@ -9,6 +9,7 @@
       "green": "/images/logos/ge/logo-green.webp",
       "lime": "/images/logos/ge/logo-lime.webp"
     },
+    "og-image": "/images/og-image/main-ka.png",
     "allRightsReserved": "ყველა უფლება დაცულია",
     "links": {
       "sounds": "ყველა ხმა",
@@ -49,6 +50,7 @@
   },
   "breathingExercise": {
     "title": "სუნთქვითი ვარჯიში",
+    "description": "მიჰყევით წრეს ნერვების დასამშვიდებლად, სტრესის შესამცირებლად და ჰარმონიის აღსადგენად.",
     "breatheIn": "ჩასუნთქვა",
     "hold": "შეკავება",
     "breatheOut": "ამოსუნთქვა"
@@ -56,6 +58,7 @@
   "allSounds": {
     "page": {
       "title": "დამამშვიდებელი ხმები",
+      "description": "დაისვენეთ ბუნების ხმებით: ტყე, ზღვა და ა.შ. გამოდგება ფოკუსირებისთვის, ძილისთვის ან უბრალოდ სიმშვიდისთვის.",
       "play": "დაკვრა",
       "pause": "პაუზა",
       "stop": "გაჩერება",

@@ -9,6 +9,7 @@
       "green": "/images/logos/en/logo-green.webp",
       "lime": "/images/logos/en/logo-lime.webp"
     },
+    "og-image": "/images/og-image/main-en.png",
     "allRightsReserved": "All Rights Reserved",
     "links": {
       "sounds": "All Sounds",
@@ -49,6 +50,7 @@
   },
   "breathingExercise": {
     "title": "Breathing Exercise",
+    "description": "Follow the circle to calm your nerves, reduce stress, and restore harmony.",
     "breatheIn": "Breathe In",
     "hold": "Hold",
     "breatheOut": "Breathe Out"
@@ -56,6 +58,7 @@
   "allSounds": {
     "page": {
       "title": "Relaxing Sounds",
+      "description": "Relax with the sounds of nature: forest, sea, etc. Suitable for focusing, sleeping, or just peace.",
       "play": "Play",
       "pause": "Pause",
       "stop": "Stop",

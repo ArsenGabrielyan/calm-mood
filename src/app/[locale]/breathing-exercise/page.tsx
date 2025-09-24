@@ -5,7 +5,8 @@ import { getTranslations } from "next-intl/server";
 export async function generateMetadata(): Promise<Metadata> {
      const t = await getTranslations("breathingExercise");
      return {
-          title: t("title")
+          title: t("title"),
+          description: t("description")
      }
 }
 

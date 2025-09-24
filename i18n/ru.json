@@ -9,6 +9,7 @@
       "green": "/images/logos/ru/logo-green.webp",
       "lime": "/images/logos/ru/logo-lime.webp"
     },
+    "og-image": "/images/og-image/main-ru.png",
     "allRightsReserved": "Все права защищены",
     "links": {
       "sounds": "Все звуки",
@@ -49,6 +50,7 @@
   },
   "breathingExercise": {
     "title": "Дыхательные упражнения",
+    "description": "Следуйте кругу, чтобы успокоить нервы, снять стресс и восстановить гармонию.",
     "breatheIn": "Вдох",
     "hold": "Задержание",
     "breatheOut": "Выдох"
@@ -56,6 +58,7 @@
   "allSounds": {
     "page": {
       "title": "Расслабляющие звуки",
+      "description": "Расслабьтесь под звуки природы: леса, моря и т. д. Подходит для сосредоточения, сна или просто для умиротворения.",
       "play": "Воспроизвести",
       "pause": "Пауза",
       "stop": "Остановить",

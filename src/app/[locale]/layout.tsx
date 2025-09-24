@@ -5,10 +5,11 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { languages } from "@/i18n/config";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Toaster } from "sonner";
 import { Raleway } from "next/font/google";
 import localFont from 'next/font/local'
+import { absoluteURL, KEYWORDS } from "@/lib/utils";
 
 const arArchy = localFont({
   src: [
@@ -50,6 +51,7 @@ const raleway = Raleway({
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("index");
+  const locale = await getLocale()
   return {
     title: {
       absolute: `${t("appName")} (beta)`,
@@ -100,6 +102,30 @@ export async function generateMetadata(): Promise<Metadata> {
         }
       ],
     },
+    keywords: KEYWORDS,
+    openGraph: {
+      title: t("appName"),
+      description: t("appDescription"),
+      url: absoluteURL(`/${locale}`),
+      locale,
+      siteName: t("appName"),
+      type: "website",
+      images: {
+        url: absoluteURL(t("og-image")),
+        width: 1200,
+        height: 630
+      }
+    },
+    twitter: {
+      images: [{
+        url: absoluteURL(t("og-image")),
+        width: 1200,
+        height: 630
+      }],
+      card: "summary_large_image",
+      title: t("appName"),
+      description: t("appDescription"),
+    }
   }
 }
 
