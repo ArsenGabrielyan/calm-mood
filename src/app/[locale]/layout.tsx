@@ -59,7 +59,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: t("appDescription"),
     alternates: {
-      languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}`]))
+      languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}`])),
+      canonical: absoluteURL(`${locale}`)
     },
     authors: {
        url: "https://github.com/ArsenGabrielyan",
