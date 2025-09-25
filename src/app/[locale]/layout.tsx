@@ -53,6 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("index");
   const locale = await getLocale()
   return {
+    metadataBase: new URL(absoluteURL()),
     title: {
       absolute: `${t("appName")} (beta)`,
       template: `%s | ${t("appName")} (beta)`

@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ### Additions
 - Added 🇬🇪 Georgian Language
 - Implemented Dark Mode
+- Implemented the rotating background feature
 ### Improvements
 - Updated the layout with new design on all pages (Home, Sounds, Exercise, 404 page)
 - Fixed the Exercise Page Code

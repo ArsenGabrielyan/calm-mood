@@ -20,6 +20,14 @@ export const KEYWORDS = [
 ];
 
 export const absoluteURL = (path?: string) => {
-  const url = process.env.NODE_ENV==="production" ? "https://calm-mood.vercel.app" : "localhost:3000";
+  const url = process.env.NODE_ENV==="production" ? "https://calm-mood.vercel.app" : "http://localhost:3000";
   return !path ? url : `${url}${path}`
+}
+
+export function getDailyBackground(): {jpg: string, webp: string}{
+  const mod = Math.floor(Date.now() / (1000*60*60*24)) % 3;
+  return {
+    jpg: `/images/backgrounds/bg-${mod+1}.jpg`,
+    webp: `/images/backgrounds/bg-${mod+1}.webp`,
+  }
 }
