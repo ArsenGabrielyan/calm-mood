@@ -18,7 +18,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Transformed the Design from SCSS to ShadCN UI
 - Converted SVG icons into JSX Icons
 - Improved the I18n behavior
-- SEO Optimization
+- SEO Optimization with OpenGraph Images
 ### Deletions
 - Removed the Music Player because of Firebase's Recent Change about Cloud Storage
 
