@@ -1,5 +1,5 @@
 import { ISounds } from "./types"
-import {Birds, Rain, River, Beach, Train, Thunderstorm, Night, Lake} from "@/icons"
+import {Birds, Rain, River, Beach, Train, Thunderstorm, Night, Lake, Waves, Waterfall} from "@/icons"
 
 const soundBaseURL = "https://arsengabrielyan.github.io/calm-mood/sounds"
 const soundIds = [
@@ -7,6 +7,7 @@ const soundIds = [
      "river", "beach",
      "train", "thunderstorm",
      "night", "lake",
+     "waves", "waterfall"
 ] as const
 export type SoundsType = typeof soundIds[number];
 const soundIcons = {
@@ -17,7 +18,9 @@ const soundIcons = {
      train: Train,
      thunderstorm: Thunderstorm,
      night: Night,
-     lake: Lake
+     lake: Lake,
+     waves: Waves,
+     waterfall: Waterfall
 } satisfies Record<SoundsType, React.ComponentType<React.SVGProps<SVGSVGElement>>>;
 
 export const sounds: ISounds[] = soundIds.map(id=>({

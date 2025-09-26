@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Added 🇬🇪 Georgian Language
 - Implemented Dark Mode
 - Implemented the rotating background feature
+- Added Waves and Waterfall Sound Effects
 ### Improvements
 - Updated the layout with new design on all pages (Home, Sounds, Exercise, 404 page)
 - Fixed the Exercise Page Code
@@ -19,6 +20,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Converted SVG icons into JSX Icons
 - Improved the I18n behavior
 - SEO Optimization with OpenGraph Images
+- Improved Sound Quality
 ### Deletions
 - Removed the Music Player because of Firebase's Recent Change about Cloud Storage
 
