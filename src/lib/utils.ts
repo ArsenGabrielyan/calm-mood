@@ -25,7 +25,7 @@ export const absoluteURL = (path?: string) => {
 }
 
 export function getDailyBackground(): {jpg: string, webp: string}{
-  const mod = Math.floor(Date.now() / (1000*60*60*24)) % 3;
+  const mod = Math.floor(Date.now() / (1000*60*60*24)) % 10;
   return {
     jpg: `/images/backgrounds/bg-${mod+1}.jpg`,
     webp: `/images/backgrounds/bg-${mod+1}.webp`,
