@@ -31,7 +31,7 @@ export default function ExerciseContent(){
      }, [t]);
      return (
           <AppLayout screenHeight>
-               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold">{t("title")}</h1>
+               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-semibold text-center">{t("title")}</h1>
                <div className="mt-4 space-y-2 flex justify-center items-center breathing-root">
                     <div className="bg-card text-card-foreground border shadow-sm rounded-md p-6 flex justify-center items-center flex-col gap-4 max-w-96">
                          <div className="size-72 flex justify-center items-center rounded-full border-2 border-primary will-change-transform">

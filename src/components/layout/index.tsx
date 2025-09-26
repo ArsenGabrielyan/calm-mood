@@ -15,7 +15,7 @@ export default function AppLayout({children, screenHeight=false}: AppLayoutProps
                     backgroundImage: `url(${bg.webp}), url(${bg.jpg})`
                }} className={cn("relative w-full bg-fixed bg-cover bg-no-repeat bg-center",!screenHeight && "space-y-2.5",screenHeight && "min-h-screen flex justify-center items-center flex-col gap-2.5 pt-[95px]")}>
                     <div className="absolute inset-0 bg-linear-to-t from-transparent to-background to-70% opacity-70 -z-00"></div>
-                    <div className={cn("relative z-10 text-foreground",screenHeight && "p-8")}>
+                    <div className={cn("relative z-10 text-foreground",screenHeight && "p-8 w-full md:w-fit flex justify-center items-center flex-col")}>
                          {children}
                     </div>
                </main>

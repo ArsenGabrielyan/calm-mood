@@ -55,7 +55,7 @@ export default function SoundCard({data, playback, errorMessage}: SoundCardProps
      },[playback,volume,errorMessage,loader.isLoaded])
      const finishedLoading = loader.isLoading && !loader.isLoaded
      return (
-          <div key={id} className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 bg-card text-card-foreground p-4 lg:max-w-[260px] rounded-md border shadow-sm">
+          <div key={id} className="w-full max-w-full grid grid-cols-1 md:grid-cols-2 gap-4 bg-card text-card-foreground p-4 lg:max-w-[260px] rounded-md border shadow-sm">
                <div className="w-full flex items-center justify-center relative">
                     {finishedLoading && <Loader2 className="animate-spin absolute top-1/2 left-1/2 -translate-1/2"/>}
                     <Icon className={cn(finishedLoading ? "fill-primary/25": "fill-primary","size-[85px]")}/>
