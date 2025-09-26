@@ -4,49 +4,53 @@ All notable changes to Calm Mood will be documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## 2.0.0 - TBA, 2025
+## 2.0.0 - Unreleased
 > [!NOTE]
-> This Version Jump includes massive changes in Calm Mood
-### Additions
-- Added 🇬🇪 Georgian Language
-- Implemented Dark Mode
-- Implemented the rotating background feature
-- Added Waves and Waterfall Sound Effects
-### Improvements
+> This Version Jump includes massive changes in Calm Mood.
+> Calm Mood is now migrated from Firebase into Github :-)
+### Added
+- 🇬🇪 Georgian Language
+- Dark Mode
+- The rotating background feature
+- Waves and Waterfall Sound Effects
+### Changed
 - Updated the layout with new design on all pages (Home, Sounds, Exercise, 404 page)
-- Fixed the Exercise Page Code
+- Fixed the Exercise Page Functionality
 - Moved Sounds to a Separate Branch of this repo
 - Transformed the Design from SCSS to ShadCN UI
 - Converted SVG icons into JSX Icons
-- Improved the I18n behavior
+- Improved the I18n behavior by using `next-intl`
 - SEO Optimization with OpenGraph Images
 - Improved Sound Quality
-### Deletions
-- Removed the Music Player because of Firebase's Recent Change about Cloud Storage
+- Moved Every Files from Firebase to Github on a separate branch (`static-resources`) as a CDN
+- Expanded Background Images from 1 to 10
+### Removed
+- Music player (due to Firebase Cloud Storage changes)
+- Music files (size limitations)
 
 ## 1.0.4 - November 2024
 ### Added Sounds
 - Night
 - Lake
-### Deletions
-- Removed "Mixes" Feature because of bugs
+### Removed
+- "Mixes" Feature because of bugs
 
 ## 1.0.3 - September 2024
-### Additions
-- Added i18n Support
-- Made 🇦🇲 Armenian Language a Base Language
-- Added 🇺🇸 English Language
-- Added 🇷🇺 Russian Language
+### Added
+- i18n Support
+- 🇦🇲 Armenian Language a Base Language
+- 🇺🇸 English Language
+- 🇷🇺 Russian Language
 
 ## 1.0.2 - July 2024
-### Additions
-- Added "Thunderstorm sound"
-- Added "Mixes" features using multiple sounds
+### Added
+- Thunderstorm Sound Effect
+- "Mixes" feature on the Sounds page
 
 ## 1.0.1 - November 2023
-### Improvements
+### Changed
 - Moved Music Player to the "Relaxing Sounds" Page
-- Made the Header style from "" to ""
+- Made the Navbar style from **Hamburger Menu Only** to **Responsive Navbar Style**
 ### Added Sounds
 - Beach
 - Train
