@@ -26,6 +26,24 @@
 
 <details>
      <summary>Table of Contents</summary>
+     <ol>
+          <li>
+               <a href="#about">About</a>
+               <ul>
+                    <li><a href="#built-with">Built with</a></li>
+               </ul>
+          </li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#versioning">Versioning</a></li>
+          <li>
+               <a href="#contributing">Contributing</a>
+               <ul>
+                    <li><a href="#top-contributors">Top Contributors</a></li>
+               </ul>
+          </li>
+          <li><a href="#star-history">Star History</a></li>
+          <li><a href="#license">License</a></li>
+     </ol>
 </details>
 
 ## About
@@ -47,6 +65,9 @@ reconnecting with nature in a new way. Visit the [Website][website-url] to try i
 - [![TypeScript][typescript-shield]][typescript-url]
 - [![Node JS][nodejs-shield]][nodejs-url]
 - [![Vercel][vercel-shield]][vercel-url]
+
+## Usage
+<!-- TODO: Write the app usage guide -->
 
 ## Versioning
 This website follows [Semantic Versioning](https://semver.org/). You can view the full [Changelog][changelog-url] for details on each website version.
