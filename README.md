@@ -85,16 +85,16 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 <!-- Markdown stats links -->
 [star-history-chart]: https://api.star-history.com/svg?repos=ArsenGabrielyan/calm-mood&type=Date
 [star-history-url]: https://api.star-history.com/svg?repos=ArsenGabrielyan/calm-mood&type=Date
-[contributors-shield]: https://img.shields.io/github/contributors/ArsenGabrielyan/calm-mood.svg?style=for-the-badge&color=%2322b455
+[contributors-shield]: https://img.shields.io/github/contributors/ArsenGabrielyan/calm-mood.svg?style=for-the-badge
 [contributors-url]: https://github.com/ArsenGabrielyan/calm-mood/graphs/contributors
 [top-contributors]: https://contrib.rocks/image?repo=ArsenGabrielyan/calm-mood
-[forks-shield]: https://img.shields.io/github/forks/ArsenGabrielyan/calm-mood.svg?style=for-the-badge&color=%2322b455
+[forks-shield]: https://img.shields.io/github/forks/ArsenGabrielyan/calm-mood.svg?style=for-the-badge
 [forks-url]: https://github.com/ArsenGabrielyan/calm-mood/network/members
-[stars-shield]: https://img.shields.io/github/stars/ArsenGabrielyan/calm-mood.svg?style=for-the-badge&color=%2322b455
+[stars-shield]: https://img.shields.io/github/stars/ArsenGabrielyan/calm-mood.svg?style=for-the-badge
 [stars-url]: https://github.com/ArsenGabrielyan/calm-mood/stargazers
 [issues-shield]: https://img.shields.io/github/issues/ArsenGabrielyan/calm-mood.svg?style=for-the-badge
 [issues-url]: https://github.com/ArsenGabrielyan/calm-mood/issues
-[license-shield]: https://img.shields.io/github/license/ArsenGabrielyan/calm-mood?color=%2322b455&style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/ArsenGabrielyan/calm-mood?style=for-the-badge
 [license-url]: https://github.com/ArsenGabrielyan/calm-mood/blob/main/LICENSE.md
 [created-at-shield]: https://img.shields.io/github/created-at/ArsenGabrielyan/calm-mood?style=for-the-badge
 [repo-size-shield]: https://img.shields.io/github/repo-size/ArsenGabrielyan/calm-mood?style=for-the-badge
