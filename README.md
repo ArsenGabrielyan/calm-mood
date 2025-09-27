@@ -63,7 +63,6 @@ reconnecting with nature in a new way. Visit the [Website][website-url] to try i
 - [![ShadCN UI][shadcn-shield]][shadcn-url]
 - [![Tailwind CSS][tailwind-shield]][tailwind-url]
 - [![TypeScript][typescript-shield]][typescript-url]
-- [![Node JS][nodejs-shield]][nodejs-url]
 - [![Vercel][vercel-shield]][vercel-url]
 
 ## Usage
@@ -116,8 +115,6 @@ Distributed under the MIT License. See `LICENSE.md` for more information.
 [mdx-url]: https://mdxjs.com/
 [typescript-shield]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 [typescript-url]: https://www.typescriptlang.org
-[nodejs-shield]: https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
-[nodejs-url]: https://nodejs.org/en/
 [vercel-shield]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
 [vercel-url]: https://vercel.com/
 
