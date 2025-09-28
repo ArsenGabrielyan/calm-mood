@@ -60,7 +60,7 @@ This app helps to calm the human nervous system, creating a spiritually peaceful
 reconnecting with nature in a new way. Visit the [Website][website-url] to try it :-)
 
 > [!NOTE]
-> Calm Mood v1 (Firebase-based) is now archived.  
+> Calm Mood v1 (Firebase-based) is now archived. This repo is the active version of Calm Mood.
 > This repo hosts **Calm Mood v2**, fully migrated to GitHub + Vercel.
 
 ### Built with
