@@ -19,6 +19,7 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
+
 [![Issues][issues-shield]][issues-url]
 [![project_license][license-shield]][license-url]
 ![GitHub Created At][created-at-shield]
@@ -47,8 +48,8 @@
 </details>
 
 ## About
-![Breathing Exercise][exercise-screenshot]
-![Sounds][sounds-screenshot]
+![Screenshot of Breathing Exercise feature][exercise-screenshot]
+![Screenshot of Relaxing Sounds feature][sounds-screenshot]
 
 This app helps to calm the human nervous system, creating a spiritually peaceful environment. It awakens a love for nature, helping a person feel calm and harmonious. A person will learn new things about
 - The forest
@@ -58,6 +59,10 @@ This app helps to calm the human nervous system, creating a spiritually peaceful
  
 reconnecting with nature in a new way. Visit the [Website][website-url] to try it :-)
 
+> [!NOTE]
+> Calm Mood v1 (Firebase-based) is now archived.  
+> This repo hosts **Calm Mood v2**, fully migrated to GitHub + Vercel.
+
 ### Built with
 - [![Next JS][nextjs-shield]][nextjs-url]
 - [![ShadCN UI][shadcn-shield]][shadcn-url]
@@ -66,7 +71,11 @@ reconnecting with nature in a new way. Visit the [Website][website-url] to try i
 - [![Vercel][vercel-shield]][vercel-url]
 
 ## Usage
-<!-- TODO: Write the app usage guide -->
+1. Visit [Calm Mood][website-url] and explore:
+   - **Breathing Exercise**: Guided inhale, hold, exhale with animations.
+   - **Relaxing Sounds**: Mix and match ambient sounds (birds, rain, waves, etc.).
+   - **Themes**: Switch between Light and Dark modes.
+2. Adjust sound volumes individually to create your personal ambience.
 
 ## Versioning
 This website follows [Semantic Versioning](https://semver.org/). You can view the full [Changelog][changelog-url] for details on each website version.
@@ -80,7 +89,10 @@ Contributions are Always Welcome! Please read both [Code of Conduct][code-of-con
 [![Star History Chart][star-history-chart]][star-history-url]
 
 ## License
-Distributed under the MIT License. See `LICENSE.md` for more information.
+Distributed under the MIT License. See [LICENSE.md][license-url] for more information.
+
+> GitHub [@ArsenGabrielyan](https://github.com/ArsenGabrielyan) &nbsp;&middot;&nbsp;
+> [Arsen's Website](https://arsen-g.web.app)
 
 <!-- Markdown stats links -->
 [star-history-chart]: https://api.star-history.com/svg?repos=ArsenGabrielyan/calm-mood&type=Date

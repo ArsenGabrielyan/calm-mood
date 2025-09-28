@@ -1,92 +1,125 @@
-# Contributing
+<p align="center">
+   <picture>
+         <source media="(prefers-color-scheme: dark)" srcset="./public/images/logos/en/logo-lime.webp" />
+         <source media="(prefers-color-scheme: light)" srcset="./public/images/logos/en/logo-green.webp" />
+         <img src="./public/images/logos/en/logo-green.webp" alt="Calm Mood" width="275" height="80"/>
+   </picture>
+</p>
+<h1 align="center">Contributing to Calm Mood</h1>
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+First off, thanks for considering contributing to **Calm Mood**!
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+This project exists to help people relax, reduce stress, and reconnect with nature — and your contributions help make it even better.
 
-## Pull Request Process
+We welcome all kinds of contributions: code, design, translations, documentation, bug reports, feature ideas, and feedback. This guide explains how you can get involved.
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in any examples files and the README.md to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+## Ways to Contribute
+You don’t need to write code to make a valuable contribution! Here are some great ways:
+- **Developing** - Fix bugs, add new features, or refactor code.
+- **Testing / Finding bugs** - Try the app on different devices and browsers, and open an issue if something doesn’t work.
+- **Translations** - Help us bring Calm Mood to more languages! You can edit .json files in messages/ and open a PR.
+- **Design / UI Feedback** - Suggest improvements to the layout, animations, or accessibility.
+- **Feature Requests** - Share your ideas by opening a feature request
+- **Community Support** - Answer questions in issues and help others get started.
 
-## Code of Conduct
+## Pull Request Guidelines
+When submitting a PR:
+1. Create a branch from `main`:
 
-### Our Pledge
+   ```bash
+   git checkout -b <type>/<short-description>
+   # examples: feature/new-sound, fix/typo, i18n/el-greek
+   ```
+2. Keep commits small and meaningful.
+3. Ensure the project builds and passes linting/tests.
+4. Update docs (README/CHANGELOG) if you change behavior or add features.
+5. Open the PR and describe **what** you changed and **why**.
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, gender identity and expression, level of experience,
-nationality, personal appearance, race, religion, or sexual identity and
-orientation.
+### Checklist
+- [ ] My changes work locally (`npm run dev`).
+- [ ] I’ve updated documentation/screenshots if needed.
+- [ ] I’ve tested in multiple browsers or devices.
+- [ ] My commit messages are clear and signed (`git commit -s`).
 
-### Our Standards
+> [!TIP]  
+> Signed commits are recommended for clarity. You can sign a commit with:  
+> ```bash
+> git commit -s -m "your message"
+> ```
 
-Examples of behavior that contributes to creating a positive environment
-include:
+## Development Setup
+1. Fork the repository and clone your fork:
+   ```bash
+   git clone https://github.com/<your-username>/calm-mood.git
+   cd calm-mood
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Run the development server
+   ```bash
+   npm run dev # opens the server at http://localhost:3000
+   ```
+   Then visit `http://localhost:3000`.
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+PRs are reviewed with kindness and calmness 💚
 
-Examples of unacceptable behavior by participants include:
+## Testing
+- Make sure all pages load correctly in **light and dark mode**.
+- Check responsiveness (desktop, tablet, mobile).
+- Verify that translations display properly when switching language.
+- Try the breathing exercise and sound mixer to confirm timing, animations, and volume controls.
 
-* The use of sexualized language or imagery and unwelcome sexual attention or
-advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic
-  address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+## Translating Calm Mood to another language
+> [!NOTE]
+> - All translations live in the `i18n/` folder.
+> - Each language has its own JSON file. Example: `i18n/hy.json` for Armenian.
+> - Please keep placeholders (`%s`, `%d`) intact when translating.
+> - If unsure about terminology, open a draft PR — maintainers will help review.
 
-### Our Responsibilities
+1. Make sure to download the base language file from one of these languages
+   - [Armenian][armenian-base-json]
+   - [English][english-base-json]
+2. Translate the content of all keys with your preferred tool
+3. Save your edited json file as `[lang-code].json` (Examples: `fr.json`, `el.json`, `fa.json`, etc)
+4. Do the following for testing the translation
+   - Add the `[lang-code].json` into `i18n/` folder
+   - Add the following object into `src/i18n/config.ts`:
+     ```ts
+      export const languages = [
+         // All Existing Languages +
+         {code: "<lang-code> (example: el)", countryCode: "<country-code> (example: gr)", label: "<native-name> (example: Ελληνικά)"}
+         // ^ This will be your contribution :-)
+      ] as const satisfies readonly ILanguage[];
+      ```
+5. Once Ready, open the Pull Request, so I'll include them in the app after review
 
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
+## Feedback & Feature Requests
+We love new ideas! If you have a suggestion:
+1. Check the [issues][issues-url] to see if it already exists.
+2. If not, open a [new feature request][new-feature-request-url].
+3. Clearly explain the motivation (why it helps users) and, if possible, how it could be implemented (the Feature request template says it all ☺️).
 
-Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned to this Code of Conduct, or to ban temporarily or
-permanently any contributor for other behaviors that they deem inappropriate,
-threatening, offensive, or harmful.
+## Community Guidelines
+We aim to keep Calm Mood as welcoming and peaceful as the app itself.
+- Be respectful and kind — Calm Mood is about **peace and optimism**, not conflict and pessimism.
+- Provide constructive feedback (focus on ideas, not people).
+- Keep discussions on-topic and inclusive.
+- Remember that behind every contribution is a person.
+Our [Code of Conduct][code-of-conduct-url] applies to all interactions. By participating, you agree to uphold it.
 
-### Scope
+## 🙌 A Note of Thanks
 
-This Code of Conduct applies both within project spaces and in public spaces
-when an individual is representing the project or its community. Examples of
-representing a project or community include using an official project e-mail
-address, posting via an official social media account, or acting as an appointed
-representative at an online or offline event. Representation of a project may be
-further defined and clarified by project maintainers.
+Contributors are what make Calm Mood thrive. Your time, ideas, and creativity are truly appreciated.
+Take a deep breath, enjoy the process, and let’s make something beautiful together 
 
-### Enforcement
+<!-- Reference Links -->
+[armenian-base-json]: https://github.com/ArsenGabrielyan/calm-mood/blob/main/i18n/hy.json
+[english-base-json]: https://github.com/ArsenGabrielyan/calm-mood/blob/main/i18n/en.json
+[issues-url]: https://github.com/ArsenGabrielyan/calm-mood/issues
+[new-feature-request-url]: https://github.com/ArsenGabrielyan/calm-mood/issues/new?assignees=&labels=&template=feature_request.md&title=
+[code-of-conduct-url]: https://github.com/ArsenGabrielyan/calm-mood/blob/main/CODE_OF_CONDUCT.md
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the developer at https://github.com/ArsenGabrielyan. All
-complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The developer is
-obligated to maintain confidentiality with regard to the reporter of an incident.
-Further details of specific enforcement policies may be posted separately.
-
-Project maintainers who do not follow or enforce the Code of Conduct in good
-faith may face temporary or permanent repercussions as determined by other
-members of the project's leadership.
-
-### Attribution
-
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at [http://contributor-covenant.org/version/1/4][version]
-
-[homepage]: http://contributor-covenant.org
-[version]: http://contributor-covenant.org/version/1/4/
+> GitHub [@ArsenGabrielyan](https://github.com/ArsenGabrielyan) &nbsp;&middot;&nbsp;
+> [Arsen's Website](https://arsen-g.web.app)

@@ -55,8 +55,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(absoluteURL()),
     title: {
-      absolute: `${t("appName")} (beta)`,
-      template: `%s | ${t("appName")} (beta)`
+      absolute: t("appName"),
+      template: `%s | ${t("appName")}`
     },
     description: t("appDescription"),
     alternates: {
