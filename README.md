@@ -91,8 +91,8 @@ Contributions are Always Welcome! Please read both [Code of Conduct][code-of-con
 ## License
 Distributed under the MIT License. See [LICENSE.md][license-url] for more information.
 
-> GitHub [@ArsenGabrielyan](https://github.com/ArsenGabrielyan) &nbsp;&middot;&nbsp;
-> [Arsen's Website](https://arsen-g.web.app)
+> GitHub [@ArsenGabrielyan][github-url] &nbsp;&middot;&nbsp;
+> [Arsen's Website][personal-site-url]
 
 <!-- Markdown stats links -->
 [star-history-chart]: https://api.star-history.com/svg?repos=ArsenGabrielyan/calm-mood&type=Date
@@ -123,8 +123,6 @@ Distributed under the MIT License. See [LICENSE.md][license-url] for more inform
 [shadcn-url]: https://ui.shadcn.com/
 [tailwind-shield]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [tailwind-url]: https://tailwindcss.com/
-[mdx-shield]: https://img.shields.io/badge/MDX-1B1F24?style=for-the-badge&logo=mdx&logoColor=white
-[mdx-url]: https://mdxjs.com/
 [typescript-shield]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 [typescript-url]: https://www.typescriptlang.org
 [vercel-shield]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
@@ -133,3 +131,7 @@ Distributed under the MIT License. See [LICENSE.md][license-url] for more inform
 <!-- Screenshots -->
 [exercise-screenshot]: ./.github/demo-exercise.png
 [sounds-screenshot]: ./.github/demo-sounds.png
+
+<!-- External Links -->
+[github-url]: https://github.com/ArsenGabrielyan
+[personal-site-url]: https://arsen-g.web.app
