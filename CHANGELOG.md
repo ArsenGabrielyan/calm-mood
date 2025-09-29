@@ -4,7 +4,7 @@ All notable changes to Calm Mood will be documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## 2.0.0 - 2025-09-08
+## 2.0.0 - 2025-09-28
 > [!NOTE]
 > This Version Jump includes massive changes in Calm Mood.
 > Calm Mood is now migrated from Firebase into Github :-)
