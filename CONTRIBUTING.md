@@ -13,19 +13,19 @@ This project exists to help people relax, reduce stress, and reconnect with natu
 
 We welcome all kinds of contributions: code, design, translations, documentation, bug reports, feature ideas, and feedback. This guide explains how you can get involved.
 
+---
 ## Ways to Contribute
 You don’t need to write code to make a valuable contribution! Here are some great ways:
-- **Developing** - Fix bugs, add new features, or refactor code.
-- **Testing / Finding bugs** - Try the app on different devices and browsers, and open an issue if something doesn’t work.
-- **Translations** - Help us bring Calm Mood to more languages! You can edit .json files in messages/ and open a PR.
-- **Design / UI Feedback** - Suggest improvements to the layout, animations, or accessibility.
-- **Feature Requests** - Share your ideas by opening a feature request
-- **Community Support** - Answer questions in issues and help others get started.
+- **Development** – Fix bugs, add new features, or refactor code.
+- **Testing / Bug Reports** – Try the app on different devices and report issues if something doesn’t work.
+- **Translations** – Help us support more languages.
+- **Design / UI Feedback** – Suggest improvements to layout, visuals, or accessibility.
+- **Feature Requests** – Share your ideas for improvements by opening a feature request.
+- **Community Support** – Answer questions in issues and help others get started.
 
 ## Pull Request Guidelines
 When submitting a PR:
 1. Create a branch from `main`:
-
    ```bash
    git checkout -b <type>/<short-description>
    # examples: feature/new-sound, fix/typo, i18n/el-greek
@@ -68,7 +68,7 @@ PRs are reviewed with kindness and calmness 💚
 ## Testing
 - Make sure all pages load correctly in **light and dark mode**.
 - Check responsiveness (desktop, tablet, mobile).
-- Verify that translations display properly when switching language.
+- Verify that translations display properly when switching languages.
 - Try the breathing exercise and sound mixer to confirm timing, animations, and volume controls.
 
 ## Translating Calm Mood to another language
@@ -82,7 +82,7 @@ PRs are reviewed with kindness and calmness 💚
    - [Armenian][armenian-base-json]
    - [English][english-base-json]
 2. Translate the content of all keys with your preferred tool
-3. Save your edited json file as `[lang-code].json` (Examples: `fr.json`, `el.json`, `fa.json`, etc)
+3. Save your edited JSON file as `[lang-code].json` (Examples: `fr.json`, `el.json`, `fa.json`, etc.)
 4. Do the following for testing the translation
    - Add the `[lang-code].json` into `i18n/` folder
    - Add the following object into `src/i18n/config.ts`:
@@ -112,7 +112,7 @@ Our [Code of Conduct][code-of-conduct-url] applies to all interactions. By parti
 ## 🙌 A Note of Thanks
 
 Contributors are what make Calm Mood thrive. Your time, ideas, and creativity are truly appreciated.
-Take a deep breath, enjoy the process, and let’s make something beautiful together 
+Take a deep breath, enjoy the process, and let’s make something beautiful together. 
 
 <!-- Reference Links -->
 [armenian-base-json]: https://github.com/ArsenGabrielyan/calm-mood/blob/main/i18n/hy.json
