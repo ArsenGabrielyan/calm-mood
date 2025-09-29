@@ -20,7 +20,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Transformed the Design from SCSS to ShadCN UI
 - Converted SVG icons into JSX Icons
 - Improved the I18n behavior by using `next-intl`
-- SEO Optimization with OpenGraph Images
+- SEO Optimization with OpenGraph Images + Sitemap
 - Improved Sound Quality
 - Moved Every Files from Firebase to Github on a separate branch (`static-resources`) as a CDN
 - Expanded Background Images from 1 to 10
