@@ -26,11 +26,11 @@ function LangSwitcherSelect({children,defaultValue,label}: LangSwitcherSelectPro
           {locale: value}
      ))
      return (
-          <Select defaultValue={defaultValue} disabled={isPending} onValueChange={onValueChange}>
-               <SelectTrigger>
+          <Select defaultValue={defaultValue} disabled={isPending} onValueChange={onValueChange} >
+               <SelectTrigger className="!font-sans">
                     <SelectValue placeholder={label} />
                </SelectTrigger>
-               <SelectContent>
+               <SelectContent className="!font-sans">
                     {children}
                </SelectContent>
           </Select>

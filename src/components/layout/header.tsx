@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { useEffect, useMemo, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useCurrentTheme } from "@/hooks/use-curr-theme";
+import { ThemeToggler } from "../theme-changer/theme-toggler";
+import LanguageSwitcher from "../language-switcher";
 
 const links = [
      {name: "links.sounds", url: "/sounds"},
@@ -46,7 +48,19 @@ export default function AppHeader(){
                     {links.map((link,i)=>(
                          <li key={`link-${i}`} className={cn("text-xl pb-1 border-b-2 border-b-transparent capitalize",isSticky ? "hover:border-b-primary" : "hover:border-b-white")}><Link href={link.url} title={t(link.name)}>{t(link.name)}</Link></li>
                     ))}
+                    {isMobile && (
+                         <li className="flex justify-center items-center gap-3">
+                              <LanguageSwitcher/>
+                              <ThemeToggler/>
+                         </li>
+                    )}
                </ul>
+               {!isMobile && (
+                    <div className="flex justify-center items-center gap-3">
+                         <LanguageSwitcher/>
+                         <ThemeToggler/>
+                    </div>
+               )}
           </header>
      )
 }
