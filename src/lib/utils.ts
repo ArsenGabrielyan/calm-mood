@@ -24,10 +24,15 @@ export const absoluteURL = (path?: string) => {
   return !path ? url : `${url}${path}`
 }
 
-export function getDailyBackground(): {jpg: string, webp: string}{
+export function getDailyBackground(): React.CSSProperties{
   const mod = Math.floor(Date.now() / (1000*60*60*24)) % 10;
+  const jpg = `/images/backgrounds/bg-${mod+1}.jpg`;
+  const webp = `/images/backgrounds/bg-${mod+1}.webp`
   return {
-    jpg: `/images/backgrounds/bg-${mod+1}.jpg`,
-    webp: `/images/backgrounds/bg-${mod+1}.webp`,
+    background: `url(${webp}), url(${jpg})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed"
   }
 }
