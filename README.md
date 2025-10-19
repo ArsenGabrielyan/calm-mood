@@ -24,6 +24,7 @@
 [![project_license][license-shield]][license-url]
 ![GitHub Created At][created-at-shield]
 ![GitHub repo size][repo-size-shield]
+![Vercel Deployment][vercel-stats-shield]
 
 <details>
      <summary>Table of Contents</summary>
@@ -115,6 +116,7 @@ Distributed under the MIT License. See [LICENSE.md][license-url] for more inform
 [changelog-url]: https://github.com/ArsenGabrielyan/calm-mood/blob/main/CHANGELOG.md
 [website-url]: https://calm-mood.vercel.app/
 [version-shield]: https://img.shields.io/github/package-json/v/ArsenGabrielyan/calm-mood?style=for-the-badge
+[vercel-stats-shield]: https://vercelbadge.vercel.app/api/ArsenGabrielyan/calm-mood?style=for-the-badge
 
 <!-- Languages -->
 [nextjs-shield]: https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
