@@ -1,4 +1,4 @@
-import { ILanguage, LangCodeType } from "@/lib/types";
+import { ILanguage, LangCodeType } from "./types";
 
 export const languages = [
      {code: "hy", countryCode: "am", label: "Հայերեն"},

@@ -10,10 +10,11 @@ import { cn } from "@/lib/utils";
 import { useCurrentTheme } from "@/hooks/use-curr-theme";
 import { ThemeToggler } from "../theme-changer/theme-toggler";
 import LanguageSwitcher from "../language-switcher";
+import { NavLinks } from "@/lib/types";
 
 const links = [
-     {name: "links.sounds", url: "/sounds"},
-     {name: "links.exercise", url: "/breathing-exercise"},
+     {name: NavLinks.Sounds, url: "/sounds"},
+     {name: NavLinks.BreathingExercise, url: "/breathing-exercise"},
 ]
 
 export default function AppHeader(){
@@ -46,7 +47,7 @@ export default function AppHeader(){
                )}
                <ul className={cn("font-heading gap-2 lg:gap-4.5 items-center justify-center fixed lg:relative transition-all top-[90px] lg:top-0 left-0 w-full lg:w-fit flex-col lg:flex-row p-2 lg:p-0", isMobile && !isOpen ? "hidden" : "flex", isMobile && (isSticky ? "bg-muted text-primary border-b border-accent" : "bg-[#2d5e0d]"))}>
                     {links.map((link,i)=>(
-                         <li key={`link-${i}`} className={cn("text-xl pb-1 border-b-2 border-b-transparent capitalize",isSticky ? "hover:border-b-primary" : "hover:border-b-white")}><Link href={link.url} title={t(link.name)}>{t(link.name)}</Link></li>
+                         <li key={`link-${i}`} className={cn("text-xl pb-1 border-b-2 border-b-transparent capitalize",isSticky ? "hover:border-b-primary" : "hover:border-b-white")}><Link href={link.url}>{t(`links.${link.name}`)}</Link></li>
                     ))}
                     {isMobile && (
                          <li className="flex justify-center items-center gap-3">

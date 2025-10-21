@@ -11,17 +11,18 @@ import { usePathname, useRouter } from "@/i18n/navigation"
 import { useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { languages } from "@/i18n/config";
+import { LangCodeType } from "@/i18n/types";
 
 interface LangSwitcherSelectProps{
      children: React.ReactNode,
-     defaultValue: string,
+     defaultValue: LangCodeType,
      label: string
 }
 function LangSwitcherSelect({children,defaultValue,label}: LangSwitcherSelectProps){
      const router = useRouter();
      const [isPending, startTransition] = useTransition();
      const pathname = usePathname();
-     const onValueChange = (value: string) => startTransition(()=>router.replace(
+     const onValueChange = (value: LangCodeType) => startTransition(()=>router.replace(
           {pathname},
           {locale: value}
      ))
