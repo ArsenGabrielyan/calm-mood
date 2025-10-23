@@ -11,6 +11,34 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    ignores: [
+      "prisma/generated",
+      "node_modules/**",
+      ".next/**",
+      "out/**",
+      "build/**",
+      "next-env.d.ts",
+      "dockerfile",
+      ".dockerignore"
+    ]
+  },
+  {
+    files: ["**/*.ts"],
+    ...(process.env.CI && {
+      languageOptions: {
+        parserOptions: {
+          project: "./tsconfig.json",
+          tsconfigRootDir: __dirname
+        }
+      }
+    }),
+    rules: {
+      "@typescript-eslint/no-misused-promises": process.env.CI
+        ? "error"
+        : "off"
+    }
+  }
 ];
 
 export default eslintConfig;

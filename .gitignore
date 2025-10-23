@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# i18n files
+i18n/*.d.json.ts
+i18n/*/*.d.json.ts
