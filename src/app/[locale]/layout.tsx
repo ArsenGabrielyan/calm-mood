@@ -5,7 +5,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { languages } from "@/i18n/config";
 import { notFound } from "next/navigation";
-import { getLocale, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Toaster } from "sonner";
 import { Raleway } from "next/font/google";
 import localFont from 'next/font/local'
@@ -49,9 +49,14 @@ const raleway = Raleway({
   subsets: ["cyrillic","latin","cyrillic-ext","latin-ext"],
 })
 
-export async function generateMetadata(): Promise<Metadata> {
+export interface RootLayoutProps{
+  children: React.ReactNode;
+  params: Promise<{locale: string}>
+}
+
+export async function generateMetadata({params}: RootLayoutProps): Promise<Metadata> {
+  const {locale} = await params;
   const t = await getTranslations("index");
-  const locale = await getLocale()
   return {
     metadataBase: new URL(absoluteURL()),
     title: {
@@ -135,11 +140,6 @@ export const viewport: Viewport = {
   themeColor: "#2d5e0d"
 }
 
-interface RootLayoutProps{
-  children: React.ReactNode;
-  params: Promise<{locale: string}>
-}
-
 export default async function RootLayout({
   children,
   params
@@ -148,7 +148,6 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
