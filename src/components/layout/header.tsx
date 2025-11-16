@@ -39,25 +39,21 @@ export default function AppHeader(){
      },[])
      return (
           <header className={cn(isSticky ? "bg-muted text-primary shadow-md" : "bg-[#2d5e0d] text-white", "py-2 px-4 flex justify-between items-center gap-2 fixed top-0 left-0 z-20 w-full h-[91px] transition-all")}>
+               {isMobile && <ThemeToggler/>}
                <Link href="/" title={t("backButton")}><Image src={t(logo)} alt="logo" width={220} height={75}/></Link>
                {isMobile && (
                     <Button variant="ghost" size="icon" className={cn(isSticky ? "text-foreground" : "text-white")} onClick={()=>setIsOpen(!isOpen)}>
-                         {isOpen ? <X className="size-8"/> : <Menu className="size-8"/>}
+                         {isOpen ? <X className="size-6"/> : <Menu className="size-6"/>}
                     </Button>
                )}
                <ul className={cn("font-heading gap-2 lg:gap-4.5 items-center justify-center fixed lg:relative transition-all top-[90px] lg:top-0 left-0 w-full lg:w-fit flex-col lg:flex-row p-2 lg:p-0", isMobile && !isOpen ? "hidden" : "flex", isMobile && (isSticky ? "bg-muted text-primary border-b border-accent" : "bg-[#2d5e0d]"))}>
                     {links.map((link,i)=>(
                          <li key={`link-${i}`} className={cn("text-xl pb-1 border-b-2 border-b-transparent capitalize",isSticky ? "hover:border-b-primary" : "hover:border-b-white")}><Link href={link.url}>{t(`links.${link.name}`)}</Link></li>
                     ))}
-                    {isMobile && (
-                         <li className="flex justify-center items-center gap-3">
-                              <LanguageSwitcher/>
-                              <ThemeToggler/>
-                         </li>
-                    )}
+                    {isMobile && <LanguageSwitcher/>}
                </ul>
                {!isMobile && (
-                    <div className="flex justify-center items-center gap-3">
+                    <div className="flex justify-center items-center gap-1.5">
                          <LanguageSwitcher/>
                          <ThemeToggler/>
                     </div>
