@@ -136,4 +136,4 @@ Distributed under the MIT License. See [LICENSE.md][license-url] for more inform
 
 <!-- External Links -->
 [github-url]: https://github.com/ArsenGabrielyan
-[personal-site-url]: https://arsen-g.web.app
+[personal-site-url]: https://arsen-2005.vercel.app
