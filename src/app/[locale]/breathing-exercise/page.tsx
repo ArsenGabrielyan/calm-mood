@@ -32,7 +32,10 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
                card: "summary_large_image",
                title: t("title"),
                description: t("description"),
-          }
+          },
+          alternates: {
+               canonical: absoluteURL(`/${locale}/breathing-exercise`)
+          },
      }
 }
 
