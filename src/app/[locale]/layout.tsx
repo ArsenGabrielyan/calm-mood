@@ -10,6 +10,7 @@ import { Toaster } from "sonner";
 import { Raleway } from "next/font/google";
 import localFont from 'next/font/local'
 import { absoluteURL, KEYWORDS } from "@/lib/utils";
+import { WebSite, WithContext } from 'schema-dts'
 
 const arArchy = localFont({
   src: [
@@ -69,8 +70,8 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
       canonical: absoluteURL(`${locale}`)
     },
     authors: {
-       url: "https://github.com/ArsenGabrielyan",
-       name: t("author")
+      url: "https://github.com/ArsenGabrielyan",
+      name: t("author")
     },
     applicationName: t("appName"),
     icons: {
@@ -151,11 +152,26 @@ export default async function RootLayout({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  const t = await getTranslations("index");
+  const jsonLd: WithContext<WebSite> = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: t("appName"),
+    description: t("appDescription"),
+    url: absoluteURL(),
+    inLanguage: locale,
+  }
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={`${arArchy.variable} ${kamar.variable} ${raleway.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c'),
+          }}
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
