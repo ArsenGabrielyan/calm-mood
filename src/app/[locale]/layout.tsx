@@ -132,6 +132,9 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
       card: "summary_large_image",
       title: t("appName"),
       description: t("appDescription"),
+    },
+    verification: {
+      google: "bVrBx7_N7HVVVrC3gk9CwfbykFwxjjIUSM_Je6SEfkE" 
     }
   }
 }
