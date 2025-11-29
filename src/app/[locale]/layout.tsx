@@ -79,34 +79,40 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
         {
           media: "(prefers-color-scheme: dark)",
           url: "/favicon-dark.ico",
-          href: "/favicon-dark.ico"
+          href: "/favicon-dark.ico",
+          type: "image/x-icon"
         },
         {
           media: "(prefers-color-scheme: light)",
           url: "/favicon.ico",
-          href: "/favicon.ico"
+          href: "/favicon.ico",
+          type: "image/x-icon"
         },
         {
           media: "(prefers-color-scheme: dark)",
           url: "/app-dark.png",
-          href: "/app-dark.png"
+          href: "/app-dark.png",
+          type: "image/png"
         },
         {
           media: "(prefers-color-scheme: light)",
           url: "/app-icon.png",
-          href: "/app-icon.png"
+          href: "/app-icon.png",
+          type: "image/png"
         }
       ],
       apple: [
         {
           media: "(prefers-color-scheme: dark)",
           url: "/app-dark.png",
-          href: "/app-dark.png"
+          href: "/app-dark.png",
+          type: "image/png"
         },
         {
           media: "(prefers-color-scheme: light)",
           url: "/app-icon.png",
-          href: "/app-icon.png"
+          href: "/app-icon.png",
+          type: "image/png"
         }
       ],
     },
