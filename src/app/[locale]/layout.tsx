@@ -92,12 +92,14 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
           media: "(prefers-color-scheme: dark)",
           url: "/app-dark.png",
           href: "/app-dark.png",
+          sizes: "192x192",
           type: "image/png"
         },
         {
           media: "(prefers-color-scheme: light)",
           url: "/app-icon.png",
           href: "/app-icon.png",
+          sizes: "192x192",
           type: "image/png"
         }
       ],
@@ -106,12 +108,14 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
           media: "(prefers-color-scheme: dark)",
           url: "/app-dark.png",
           href: "/app-dark.png",
+          sizes: "192x192",
           type: "image/png"
         },
         {
           media: "(prefers-color-scheme: light)",
           url: "/app-icon.png",
           href: "/app-icon.png",
+          sizes: "192x192",
           type: "image/png"
         }
       ],
