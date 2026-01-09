@@ -6,6 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Loader2, Volume, Volume1, Volume2, VolumeOff } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { Spinner } from "./ui/spinner";
 
 interface SoundCardProps{
      data: ISounds,
@@ -57,7 +58,7 @@ export default function SoundCard({data, playback, errorMessage}: SoundCardProps
      return (
           <div key={id} className="w-full max-w-full grid grid-cols-1 md:grid-cols-2 gap-4 bg-card text-card-foreground p-4 lg:max-w-[260px] rounded-md border shadow-sm">
                <div className="w-full flex items-center justify-center relative">
-                    {finishedLoading && <Loader2 className="animate-spin absolute top-1/2 left-1/2 -translate-1/2"/>}
+                    {finishedLoading && <Spinner className="absolute top-1/2 left-1/2 -translate-1/2"/>}
                     <Icon className={cn(finishedLoading ? "fill-primary/25": "fill-primary","size-[85px]")}/>
                </div>
                <div className="w-full flex flex-col items-center justify-between gap-4">

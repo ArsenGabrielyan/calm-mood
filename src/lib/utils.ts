@@ -36,3 +36,11 @@ export function getDailyBackground(): React.CSSProperties{
     backgroundAttachment: "fixed"
   }
 }
+export function preloadAudio(...audioFiles: string[]) {
+  const set = new Set(audioFiles);
+  const arr = audioFiles.filter(([key])=>set.has(key)).map((entries)=>entries[1]);
+  arr.forEach(src => {
+    const audio = new Audio(src);
+    audio.load();
+  });
+}

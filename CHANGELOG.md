@@ -4,6 +4,13 @@ All notable changes to Calm Mood will be documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
+## 2.0.1 - Unreleased
+### Added
+- Form to set the interval time
+- Breathing exercise types
+- Chord progression for breathing exercise that uses G Major scale (C - Gsus2 - G)
+- Volume slider in the Breathing exercise page
+
 ## 2.0.0 - 2025-09-28
 > [!NOTE]
 > This Version Jump includes massive changes in Calm Mood.
@@ -25,8 +32,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Moved Every Files from Firebase to Github on a separate branch (`static-resources`) as a CDN
 - Expanded Background Images from 1 to 10
 ### Removed
-- **Music player** (due to Firebase Cloud Storage changes)
-- **Music files** (size limitations)
+- **Music player** due to Firebase Cloud Storage changes
+- **Music files** size limitations
 
 ## 1.0.4 - 2024-11-20
 ### Added Sounds
