@@ -51,7 +51,6 @@
   --shadow-lg: 0 1px 3px 0px oklch(0.42 0.12 136.29 / 0.10), 0 4px 6px -1px oklch(0.42 0.12 136.29 / 0.10);
   --shadow-xl: 0 1px 3px 0px oklch(0.42 0.12 136.29 / 0.10), 0 8px 10px -1px oklch(0.42 0.12 136.29 / 0.10);
   --shadow-2xl: 0 1px 3px 0px oklch(0.42 0.12 136.29 / 0.25);
-  --grow-shrink: 5s; --hold: 2.5s;
 }
 
 .dark {
@@ -149,9 +148,11 @@
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 
-  --animate-grow-circle: growCircle var(--grow-shrink) ease-in-out forwards;
-  --animate-shrink-circle: shrinkCircle var(--grow-shrink) ease-in-out forwards;
-  --animate-hold-circle: pulseGlow var(--hold) ease-in-out infinite;
+  --animate-grow-circle: growCircle ease-in-out forwards;
+  --animate-shrink-circle: shrinkCircle ease-in-out forwards;
+  --animate-hold-circle: pulseGlow ease-in-out infinite;
+
+  --breakpoint-xs: 30rem;
 
   @keyframes growCircleNoGlow {
     0% { transform: scale(0.25);}
@@ -196,13 +197,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  
-  .breathing-root .animate-grow-circle { animation: growCircleNoGlow var(--grow-shrink) linear forwards !important; }
+  .breathing-root .animate-grow-circle { animation: growCircleNoGlow linear forwards !important; }
   .breathing-root :where(*:not(.animate-grow-circle,.animate-shrink-circle),*::before,*::after){
     animation: none !important;
     transition-property: none !important;
   }
   *,*::before,*::after{transition-property: none !important;}
   .breathing-root .animate-hold-circle { animation: none !important; }
-  .breathing-root .animate-shrink-circle { animation: shrinkCircle var(--grow-shrink) linear forwards !important; }
+  .breathing-root .animate-shrink-circle { animation: shrinkCircle linear forwards !important; }
 }

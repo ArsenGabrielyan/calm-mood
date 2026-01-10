@@ -10,6 +10,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Breathing exercise types
 - Chord progression for breathing exercise that uses G Major scale (C - Gsus2 - G)
 - Volume slider in the Breathing exercise page
+- Presets for the Interval Time
+- Different Types for Breathing Exercises
+### Improved
+- Bug fixes from Breathing exercise
 
 ## 2.0.0 - 2025-09-28
 > [!NOTE]
