@@ -21,7 +21,7 @@ export default function PopupComponent({open, onOpen, children, title, descripti
                               <DrawerDescription>{description}</DrawerDescription>
                          )}
                     </DrawerHeader>
-                    <div className="p-5">
+                    <div className="p-5 overflow-y-auto">
                          {children}
                     </div>
                </DrawerContent>
