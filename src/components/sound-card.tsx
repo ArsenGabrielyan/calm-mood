@@ -56,12 +56,12 @@ export default function SoundCard({data, playback, errorMessage}: SoundCardProps
      },[playback,volume,errorMessage,loader.isLoaded])
      const finishedLoading = loader.isLoading && !loader.isLoaded
      return (
-          <div key={id} className="w-full max-w-full grid grid-cols-1 md:grid-cols-2 gap-4 bg-card text-card-foreground p-4 lg:max-w-[260px] rounded-md border shadow-sm">
-               <div className="w-full flex items-center justify-center relative">
+          <div key={id} className="w-full max-w-full flex justify-between items-center flex-wrap flex-col md:flex-row gap-4 bg-card text-card-foreground py-4 px-3 lg:max-w-xs rounded-md border shadow-sm">
+               <div className="flex-1 flex items-center justify-center flex-row relative">
                     {finishedLoading && <Spinner className="absolute top-1/2 left-1/2 -translate-1/2"/>}
                     <Icon className={cn(finishedLoading ? "fill-primary/25": "fill-primary","size-[85px]")}/>
                </div>
-               <div className="w-full flex flex-col items-center justify-between gap-4">
+               <div className="w-full md:w-fit flex-2 flex flex-col items-center justify-between gap-4">
                     <h2 className="text-3xl md:text-2xl font-semibold text-primary text-center">{t(id)}</h2>
                     <div className="flex items-center gap-2 w-full">
                          {volumeIcon}

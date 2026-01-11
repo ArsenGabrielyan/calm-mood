@@ -18,7 +18,7 @@ export default function SoundsContent(){
      return (
           <AppLayout screenHeight>
                <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-[56px] text-center font-semibold">{t("title")}</h1>
-               <div className="mt-4 space-y-2 flex justify-center items-center flex-col gap-4 w-full lg:w-fit max-w-full lg:max-w-8xl">
+               <div className="mt-4 space-y-2 flex justify-center items-center flex-col gap-4 w-full">
                     <div className="flex items-center gap-3">
                          <Button className="size-14" onClick={handlePlayPause} title={t(label)}>
                               {playback==="playing" ? <Pause className="size-8"/> : <Play className="size-8"/>}

@@ -1,19 +1,19 @@
-import { PHASE_TO_CIRCLE } from "@/lib/constants/maps";
-import { BreathingExerciseState, BreathingPhase } from "@/lib/types";
+import { BreathingExerciseState, BreathingPhase, CirclePhase } from "@/lib/types";
 import { preloadAudio } from "@/lib/utils";
 import { VolumeOff, Volume, Volume1, Volume2 } from "lucide-react";
 import { useRef, useMemo, useEffect } from "react";
 
 export default function useExercise(state: BreathingExerciseState){
-     const lastPhase = useRef<BreathingExerciseState["circleType"] | null>(null);
+     const lastPhase = useRef<CirclePhase>(null);
      const audioRef = useRef<HTMLAudioElement>(null);
+
      const volumeIcon = useMemo(()=>state.volume<5 ? <VolumeOff/> : state.volume<10 ? <Volume/> : state.volume<60 ? <Volume1/> : <Volume2/>,[state.volume])
 
      const cycleMs = state.time * 1000;
      const holdTime = useMemo(()=>cycleMs/5, [cycleMs]);
      const growTime = holdTime * 2;
 
-     const SOUND_BY_PHASE: Record<BreathingExerciseState["circleType"], string> = {
+     const SOUND_BY_PHASE: Record<CirclePhase, string> = {
           growing: Math.round(growTime/1000) >= 7 ? "/sounds/breathe-in-long.mp3" : "/sounds/breathe-in.mp3",
           hold: Math.round(holdTime/1000) >= 5 ? "/sounds/hold-long.mp3" : "/sounds/hold.mp3",
           shrinking: Math.round(growTime/1000) >= 7 ? "/sounds/breathe-out-long.mp3" : "/sounds/breathe-out.mp3",
@@ -54,7 +54,6 @@ export default function useExercise(state: BreathingExerciseState){
      },[state.volume])
 
      return {
-          PHASE_TO_CIRCLE,
           PHASE_DURATION,
           volumeIcon,
           growTime,

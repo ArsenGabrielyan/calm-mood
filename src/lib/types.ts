@@ -1,4 +1,4 @@
-import { BreathingExerciseSchema } from "./schemas";
+import { getBreathingExerciseSchema } from "./schemas";
 import { SoundsType } from "./sounds";
 import * as z from "zod"
 
@@ -20,11 +20,16 @@ export type BreathingPatternId =
   | "inhale-exhale"
   | "inhale-exhale-hold";
 
-export type BreathingExerciseType = z.infer<typeof BreathingExerciseSchema>
+export type CirclePhase = "growing" | "hold" | "shrinking"
+
+export type BreathingExerciseType = z.infer<
+      Awaited<ReturnType<typeof getBreathingExerciseSchema>>
+>
 
 export interface BreathingExerciseState{
       text: string,
-      circleType: 'growing'|'shrinking'|'hold',
+      circleType: CirclePhase,
+      prevCircleType?: CirclePhase;
       open: boolean,
       volume: number,
       time: number,

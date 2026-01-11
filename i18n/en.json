@@ -54,7 +54,13 @@
     "description": "Follow the circle to calm your nerves, reduce stress, and restore harmony.",
     "breatheIn": "Breathe In",
     "hold": "Hold",
-    "breatheOut": "Breathe Out"
+    "breatheOut": "Breathe Out",
+    "patterns": {
+      "inhale-hold-exhale": "In – Hold – Out",
+      "inhale-hold-exhale-hold": "In – Hold – Out – Hold",
+      "inhale-exhale":  "In – Out",
+      "inhale-exhale-hold": "In – Out – Hold"
+    }
   },
   "allSounds": {
     "page": {
@@ -84,5 +90,25 @@
     "light": "Light",
     "dark": "Dark",
     "system": "System (Default)"
+  },
+  "settings": {
+    "title": "Settings",
+    "buttons": {
+      "apply": "Apply",
+      "cancel": "Cancel"
+    },
+    "breathing-exercise": {
+      "time": "Exercise Time",
+      "hold": "Hold: {hold}s",
+      "breathe": "Breathe In / Out: {breatheTime}s",
+      "duration": "Duration",
+      "presets": "Presets",
+      "seconds": "{seconds} seconds",
+      "type": "Type"
+    },
+    "validations": {
+      "duration": "Duration should be in between 12 and 300 seconds.",
+      "exercise-type": "The type of a breathing exercise is required."
+    }
   }
 }

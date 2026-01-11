@@ -13,7 +13,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Presets for the Interval Time
 - Different Types for Breathing Exercises
 ### Improved
-- Bug fixes from Breathing exercise
+- Circle Animation on the Breathing exercise Page
+- Bug fixes on the Breathing exercise Page
+- UI fixes on the Sounds Page
+- Extended All Translations of these new changes
 
 ## 2.0.0 - 2025-09-28
 > [!NOTE]
@@ -26,15 +29,16 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 - Waves and Waterfall Sound Effects
 ### Changed
 - Updated the layout with new design on all pages (Home, Sounds, Exercise, 404 page)
-- Fixed the Exercise Page Functionality
 - Moved Sounds to a Separate Branch of this repo
 - Transformed the Design from SCSS to ShadCN UI
 - Converted SVG icons into JSX Icons
-- Improved the I18n behavior by using `next-intl`
 - SEO Optimization with OpenGraph Images + Sitemap
-- Improved Sound Quality
 - Moved Every Files from Firebase to Github on a separate branch (`static-resources`) as a CDN
 - Expanded Background Images from 1 to 10
+### Improved and Fixed
+- Sound Quality
+- I18n behavior by using `next-intl`
+- The Breathing Exercise Page
 ### Removed
 - **Music player** due to Firebase Cloud Storage changes
 - **Music files** size limitations
