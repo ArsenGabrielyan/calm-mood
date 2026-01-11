@@ -4,7 +4,7 @@ All notable changes to Calm Mood will be documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## 2.0.1 - Unreleased
+## 2.0.1 - 2026-01-11
 ### Added
 - Form to set the interval time
 - Breathing exercise types
