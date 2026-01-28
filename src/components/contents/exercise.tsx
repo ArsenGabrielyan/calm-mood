@@ -7,7 +7,7 @@ import PopupComponent from "../popup";
 import { Button } from "../ui/button";
 import { Cog } from "lucide-react";
 import { Slider } from "../ui/slider";
-import ExerciseSettings from "../setttings/exercise";
+import ExerciseSettings from "../forms/exercise";
 import { BreathingExerciseState, BreathingExerciseType, BreathingPhase } from "@/lib/types";
 import { BREATHING_PATTERNS, PHASE_TO_CIRCLE } from "@/lib/constants/maps";
 import useExercise from "@/hooks/use-breathing-exercise";

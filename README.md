@@ -75,6 +75,7 @@ reconnecting with nature in a new way. Visit the [Website][website-url] to try i
 1. Visit [Calm Mood][website-url] and explore:
    - **Breathing Exercise**: Guided inhale, hold, exhale with animations.
    - **Relaxing Sounds**: Mix and match ambient sounds (birds, rain, waves, etc.).
+   - **Pomodoro Method**: Recover time sensibility by using this feature (Make sure to leave the window open)
    - **Themes**: Switch between Light and Dark modes.
 2. Adjust sound volumes individually to create your personal ambience.
 

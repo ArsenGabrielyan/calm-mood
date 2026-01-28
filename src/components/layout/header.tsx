@@ -15,6 +15,7 @@ import { NavLinks } from "@/lib/types";
 const links = [
      {name: NavLinks.Sounds, url: "/sounds"},
      {name: NavLinks.BreathingExercise, url: "/breathing-exercise"},
+     {name: NavLinks.Pomodoro, url: "/pomodoro"}
 ]
 
 export default function AppHeader(){
