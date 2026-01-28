@@ -78,6 +78,8 @@ reconnecting with nature in a new way. Visit the [Website][website-url] to try i
    - **Pomodoro Method**: Recover time sensibility by using this feature (Make sure to leave the window open)
    - **Themes**: Switch between Light and Dark modes.
 2. Adjust sound volumes individually to create your personal ambience.
+3. Configure some settings in the Breathing Exercise page if needed
+4. Configure Pomodoro Timer settings in the Pomodoro page if needed
 
 ## Versioning
 This website follows [Semantic Versioning](https://semver.org/). You can view the full [Changelog][changelog-url] for details on each website version.
