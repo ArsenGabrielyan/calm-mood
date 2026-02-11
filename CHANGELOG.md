@@ -27,8 +27,9 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 > [!NOTE]
 > This Version Jump includes massive changes in Calm Mood.
 > Calm Mood is now migrated from Firebase into Github :-)
+### Added Languages
+- 🇬🇪 Georgian (ქართული)
 ### Added
-- 🇬🇪 Georgian Language
 - Dark Mode
 - The rotating background feature
 - Waves and Waterfall Sound Effects
@@ -58,9 +59,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## 1.0.3 - 2024-08-20
 ### Added
 - i18n Support
-- 🇦🇲 Armenian Language a Base Language
-- 🇺🇸 English Language
-- 🇷🇺 Russian Language
+### Core Languages
+- 🇦🇲 Armenian (Հայերեն) a Base Language
+- 🇺🇸 English
+- 🇷🇺 Russian (Русский)
 
 ## 1.0.2 - 2024-07-25
 ### Added
