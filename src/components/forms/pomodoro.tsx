@@ -1,7 +1,7 @@
 "use client"
 import { useForm, Controller } from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod"
-import { PomodoroType } from "@/lib/types";
+import { PomodoroType } from "@/lib/types/pomodoro";
 import { getPomodoroSchema } from "@/lib/schemas";
 import { Field, FieldError, FieldGroup, FieldLabel, FieldSet } from "../ui/field";
 import { Button } from "../ui/button";

@@ -1,4 +1,4 @@
-import { BreathingExerciseState, BreathingPhase, CirclePhase } from "@/lib/types";
+import { BreathingExerciseState, BreathingPhase, CirclePhase } from "@/lib/types/breathing-exercise";
 import { preloadAudio } from "@/lib/utils";
 import { VolumeOff, Volume, Volume1, Volume2 } from "lucide-react";
 import { useRef, useMemo, useEffect } from "react";

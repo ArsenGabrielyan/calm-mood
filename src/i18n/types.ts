@@ -1,3 +1,4 @@
+import { NamespaceKeys, NestedKeyOf, useTranslations } from "next-intl";
 import hyBase from "../../i18n/hy.json"
 
 export type LangCodeType = 'en' | 'hy' | 'ru' | 'ka';
@@ -8,3 +9,6 @@ export interface ILanguage{
      label: string
 }
 export type MessageSchema = typeof hyBase;
+
+type TranslationNS = NamespaceKeys<MessageSchema,NestedKeyOf<MessageSchema>>
+export type TFunction<T extends TranslationNS> = ReturnType<typeof useTranslations<T>>

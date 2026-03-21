@@ -5,7 +5,7 @@ import { Progress } from "../ui/progress";
 import { Button } from "../ui/button";
 import { Pause, Play, Square } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { PomodoroRuntime, PomodoroState, PomodoroType } from "@/lib/types";
+import { PomodoroRuntime, PomodoroState, PomodoroType } from "@/lib/types/pomodoro";
 import PopupComponent from "../popup";
 import { INITIAL_POMODORO_STATE } from "@/lib/constants";
 import { ButtonGroup } from "../ui/button-group";

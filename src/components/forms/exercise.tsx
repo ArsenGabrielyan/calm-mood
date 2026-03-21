@@ -1,4 +1,4 @@
-import { BreathingExerciseType, BreathingPatternId } from "@/lib/types"
+import { BreathingExerciseType, BreathingPatternId } from "@/lib/types/breathing-exercise"
 import { useForm, Controller } from "react-hook-form"
 import {zodResolver} from "@hookform/resolvers/zod"
 import { getBreathingExerciseSchema } from "@/lib/schemas"

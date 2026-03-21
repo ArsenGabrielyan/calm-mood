@@ -8,7 +8,7 @@ import { Button } from "../ui/button";
 import { Cog } from "lucide-react";
 import { Slider } from "../ui/slider";
 import ExerciseSettings from "../forms/exercise";
-import { BreathingExerciseState, BreathingExerciseType, BreathingPhase } from "@/lib/types";
+import { BreathingExerciseState, BreathingExerciseType, BreathingPhase } from "@/lib/types/breathing-exercise";
 import { BREATHING_PATTERNS, PHASE_TO_CIRCLE } from "@/lib/constants/maps";
 import useExercise from "@/hooks/use-breathing-exercise";
 import { EXERCISE_INTERVAL_TIME } from "@/lib/constants";

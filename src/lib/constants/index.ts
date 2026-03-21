@@ -1,5 +1,5 @@
 import { Clock12, Clock2, Clock4, Clock6 } from "lucide-react";
-import { PomodoroState } from "../types";
+import { PomodoroState } from "../types/pomodoro";
 
 export const PRESETS = [
   { id: "calm", Icon: Clock2, seconds: 12 },

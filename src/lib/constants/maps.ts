@@ -1,4 +1,4 @@
-import { BreathingPhase, BreathingExerciseState, BreathingPatternId } from "../types";
+import { BreathingPhase, BreathingExerciseState, BreathingPatternId } from "../types/breathing-exercise";
 
 export const PHASE_TO_CIRCLE: Record<BreathingPhase, BreathingExerciseState["circleType"]> = {
      inhale: "growing",
