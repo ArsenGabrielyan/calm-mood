@@ -1,0 +1,55 @@
+{
+  "index": {
+    "appName": "Спокойное Настроение",
+    "appDescription": "Если вы испытываете стресс, напряжение или депрессию, вы попали по адресу! Слушайте и наслаждайтесь!",
+    "author": "Арсен Г.",
+    "langSwitcherLabel": "Изменить язык",
+    "logo": {
+      "original": "/images/logos/ru/logo.webp",
+      "green": "/images/logos/ru/logo-green.webp",
+      "lime": "/images/logos/ru/logo-lime.webp"
+    },
+    "og-image": "/images/og-image/main-ru.png",
+    "allRightsReserved": "Все права защищены",
+    "github-link": "Посмотреть на GitHub",
+    "links": {
+      "sounds": "Все звуки",
+      "exercise": "Дыхательные упражнения",
+      "pomodoro": "Помодоро"
+    },
+    "backButton": "Назад",
+    "learnMore": "Подробнее"
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Искомая страница не найдена. Возможно, вы неправильно ввели адрес, страница была перемещена или её не существует.",
+    "backButton": "Возвращаться",
+    "metaTitle": "Упс, эта страница не найдена"
+  },
+  "theme": {
+    "title": "Изменить режим",
+    "light": "Световой",
+    "dark": "Темный",
+    "system": "Системный (по умолчанию)"
+  },
+  "settings": {
+    "title": "Настройки",
+    "buttons": {
+      "apply": "Применять",
+      "cancel": "Отменить"
+    },
+    "breathing-exercise": {
+      "time": "Временной период",
+      "hold": "Задержание։ {hold} сек",
+      "breathe": "Вдох / Выдох: {breatheTime} сек",
+      "duration": "Продолжительность",
+      "presets": "Подготовленный набор",
+      "seconds": "{seconds} секунды",
+      "type": "Вид упражнений"
+    },
+    "validations": {
+      "duration": "Продолжительность временного промежутка должна составлять от 12 до 300 секунд.",
+      "exercise-type": "Вид упражнений обязателен."
+    }
+  }
+}

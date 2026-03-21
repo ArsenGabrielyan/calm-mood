@@ -1,0 +1,64 @@
+{
+     "pomodoro": {
+          "title": "Pomodoro Method",
+          "phase": {
+               "focus": "Focus",
+               "long-break": "Long Break",
+               "short-break": "Short Break"
+          },
+          "continue": "Continue",
+          "pause": "Pause",
+          "stop": "Stop",
+          "close": "Close",
+          "confirmation": "Stop the main Pomodoro process?",
+          "form": {
+               "focus-time": "Focus Time",
+               "short-break": "Short Break",
+               "long-break": "Long Break",
+               "loops": "Loops",
+               "start": "Start"
+          },
+          "validation": {
+               "focus-time": "Focus time should be between 25 and about 60 minutes",
+               "short-break": "Short break time should be between 5 and about 25 minutes",
+               "long-break": "Long break time should be between 10 and about 40 minutes",
+               "loops": "Cycle should be between 2 and 10 times"
+          }
+     },
+     "breathingExercise": {
+          "title": "Breathing Exercise",
+          "description": "Follow the circle to calm your nerves, reduce stress, and restore harmony.",
+          "breatheIn": "Breathe In",
+          "hold": "Hold",
+          "breatheOut": "Breathe Out",
+          "patterns": {
+               "inhale-hold-exhale": "In – Hold – Out",
+               "inhale-hold-exhale-hold": "In – Hold – Out – Hold",
+               "inhale-exhale":  "In – Out",
+               "inhale-exhale-hold": "In – Out – Hold"
+          }
+     },
+     "allSounds": {
+          "page": {
+               "title": "Relaxing Sounds",
+               "description": "Relax with the sounds of nature: forest, sea, etc. Suitable for focusing, sleeping, or just peace.",
+               "play": "Play",
+               "pause": "Pause",
+               "stop": "Stop",
+               "resume": "Resume",
+               "errorPlaying": "Unable to play audio"
+          },
+          "sounds": {
+               "birds": "Birds",
+               "rain": "Rain",
+               "river": "River",
+               "beach": "Beach",
+               "train": "Train",
+               "thunderstorm": "Thunderstorm",
+               "night": "Night",
+               "lake": "Lake",
+               "waves": "Waves",
+               "waterfall": "Waterfall"
+          }
+     }
+}

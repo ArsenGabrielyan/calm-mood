@@ -1,0 +1,55 @@
+{
+  "index": {
+    "appName": "Calm Mood",
+    "appDescription": "If you are experiencing stress, tension or depression, you're in the right place! Listen and enjoy!",
+    "author": "Arsen G.",
+    "langSwitcherLabel": "Change language",
+    "logo": {
+      "original": "/images/logos/en/logo.webp",
+      "green": "/images/logos/en/logo-green.webp",
+      "lime": "/images/logos/en/logo-lime.webp"
+    },
+    "og-image": "/images/og-image/main-en.png",
+    "allRightsReserved": "All Rights Reserved",
+    "github-link": "View on GitHub",
+    "links": {
+      "sounds": "All Sounds",
+      "exercise": "Breathing Exercise",
+      "pomodoro": "Pomodoro"
+    },
+    "backButton": "Back",
+    "learnMore": "Learn More"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for cannot be found. You may have entered the address incorrectly, the page has moved, or it may not exist.",
+    "backButton": "Go Back",
+    "metaTitle": "Oops, this page was not found"
+  },
+  "theme": {
+    "title": "Change Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System (Default)"
+  },
+  "settings": {
+    "title": "Settings",
+    "buttons": {
+      "apply": "Apply",
+      "cancel": "Cancel"
+    },
+    "breathing-exercise": {
+      "time": "Exercise Time",
+      "hold": "Hold: {hold}s",
+      "breathe": "Breathe In / Out: {breatheTime}s",
+      "duration": "Duration",
+      "presets": "Presets",
+      "seconds": "{seconds} seconds",
+      "type": "Type"
+    },
+    "validations": {
+      "duration": "Duration should be in between 12 and 300 seconds.",
+      "exercise-type": "The type of a breathing exercise is required."
+    }
+  }
+}

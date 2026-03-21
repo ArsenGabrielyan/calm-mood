@@ -1,0 +1,55 @@
+{
+  "index": {
+    "appName": "Հանգիստ Տրամադրություն",
+    "appDescription": "Եթե դուք ունեք սթրես, լարվածություն կամ դեպրեսիա, դուք ճիշտ տեղ եք եկել: Լսե՛ք և վայելեք։",
+    "author": "Արսեն Գ.",
+    "langSwitcherLabel": "Փոխել լեզուն",
+    "logo": {
+      "original": "/images/logos/logo.webp",
+      "green": "/images/logos/logo-green.webp",
+      "lime": "/images/logos/logo-lime.webp"
+    },
+    "og-image": "/images/og-image/main.png",
+    "allRightsReserved": "Բոլոր իրավունքները պաշտպանված են",
+    "github-link": "Դիտել GitHub-ում",
+    "links": {
+      "sounds": "Բոլոր Ձայները",
+      "exercise": "Շնչառական վարժություն",
+      "pomodoro": "Պոմոդորո"
+    },
+    "backButton": "Վերադառնալ",
+    "learnMore": "Մանրամասն"
+  },
+  "notFound": {
+    "title": "Այս էջը չի գտնվել",
+    "description": "Այս էջը, որ դուք փնտրում եք, չի գտնվել: Հնարավոր է սխալ մուտքագրել հասցեն, էջը տեղափոխվել է կամ ընդհանրապես գոյություն չունի:",
+    "backButton": "Վերադառնալ",
+    "metaTitle": "Վայ, այս էջը չի գտնվել"
+  },
+  "theme": {
+    "title": "Փոխել ոճը",
+    "light": "Բաց",
+    "dark": "Մուգ",
+    "system": "Լռելյայն ոճ"
+  },
+  "settings": {
+    "title": "Կարգավորումներ",
+    "buttons": {
+      "apply": "Հաստատել",
+      "cancel": "Չեղարկել"
+    },
+    "breathing-exercise": {
+      "time": "Ժամանակահատված",
+      "hold": "Պահում՝ {hold} վրկ",
+      "breathe": "Շունչ / Արտաշունչ՝ {breatheTime} վրկ",
+      "duration": "Տևողություն",
+      "presets": "Նախադրված Կարգավորումներ",
+      "seconds": "{seconds} վայրկյան",
+      "type": "Տեսակ"
+    },
+    "validations": {
+      "duration": "Ժամանակահատվածը պետք է լինի 12-300 վրկ։",
+      "exercise-type": "Վարժության տեսակը պարտադիր է։"
+    }
+  }
+}

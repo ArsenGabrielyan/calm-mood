@@ -1,0 +1,26 @@
+{
+     "about": {
+          "title": "About Us",
+          "text": "This app helps to calm the human nervous system, creating a spiritually peaceful environment. It awakens a love for nature, helping a person feel calm and harmonious. A person will learn new things about the forest, rivers, birds and other wonders of nature, reconnecting with nature in a new way.",
+          "allSoundsBtn": "All Sounds"
+     },
+     "features": {
+          "title": "Features",
+          "sounds": {
+               "title": "Relaxing Sounds",
+               "description": "Relax with the sounds of nature: forest, sea, etc. Suitable for focusing, sleeping, or just peace."
+          },
+          "exercise": {
+               "title": "Breathing Exercise",
+               "description": "Follow the circle to calm your nerves, reduce stress, and restore harmony."
+          },
+          "themes": {
+               "title": "Themes",
+               "description": "Choose a theme (Light or Dark), according to your preferred look or the system (default) theme"
+          },
+          "multilang": {
+               "title": "Multilingual UI",
+               "description": "Use it in Armenian, English, Russian, or Georgian languages. More languages will be added soon."
+          }
+     }
+}
