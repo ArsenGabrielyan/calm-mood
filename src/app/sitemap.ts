@@ -1,16 +1,6 @@
 import { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
 import { absoluteURL } from "@/lib/utils";
-import { LangCodeType } from "@/i18n/types";
-import { Languages } from "next/dist/lib/metadata/types/alternative-urls-types";
-
-function generateLocalizedPages(path: string): Languages<LangCodeType>{
-     const localized = locales.map(val=>[
-          val,
-          absoluteURL(val==="hy" ? path : `/${val}${path}`)
-     ]);
-     return Object.fromEntries(localized)
-}
 
 export default function Sitemap(): MetadataRoute.Sitemap{
      const routes = [
@@ -26,7 +16,12 @@ export default function Sitemap(): MetadataRoute.Sitemap{
                changeFrequency: "weekly",
                priority,
                alternates: {
-                    languages: generateLocalizedPages(route)
+                    languages: Object.fromEntries(
+                         locales.map((locale) => [
+                              locale,
+                              absoluteURL(locale === "hy" ? route : `/${locale}${route}`)
+                         ])
+                    )
                }
           }
      })
