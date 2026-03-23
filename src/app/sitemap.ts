@@ -16,10 +16,9 @@ export default function Sitemap(): MetadataRoute.Sitemap{
                changeFrequency: "weekly",
                priority,
                alternates: {
-                    languages:{
+                    languages: {
                          "x-default": absoluteURL(route),
-                         ...Object.fromEntries(
-                         locales.map((locale) => [
+                         ...Object.fromEntries(locales.map((locale) => [
                               locale,
                               absoluteURL(locale === "hy" ? route : `/${locale}${route}`)
                          ])
