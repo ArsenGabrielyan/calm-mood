@@ -1,14 +1,15 @@
 import { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
 import { absoluteURL } from "@/lib/utils";
+import { LangCodeType } from "@/i18n/types";
+import { Languages } from "next/dist/lib/metadata/types/alternative-urls-types";
 
-function generateSitemapItem(absoluteUrl: string, priority: 1 | 0.8): MetadataRoute.Sitemap[number]{
-     return {
-          url: absoluteURL(absoluteUrl),
-          lastModified: new Date(),
-          changeFrequency: "weekly",
-          priority
-     }
+function generateLocalizedPages(path: string): Languages<LangCodeType>{
+     const localized = locales.map(val=>[
+          val,
+          absoluteURL(val==="hy" ? path : `/${val}${path}`)
+     ]);
+     return Object.fromEntries(localized)
 }
 
 export default function Sitemap(): MetadataRoute.Sitemap{
@@ -17,11 +18,16 @@ export default function Sitemap(): MetadataRoute.Sitemap{
           "/breathing-exercise",
           "/sounds"
      ]
-     return routes.flatMap(route=>{
+     return routes.map(route=>{
           const priority = route === "/" ? 1 : 0.8;
-          return [
-               generateSitemapItem(`${route === "/" ? "" : route}`,priority),
-               ...locales.map(locale=>generateSitemapItem(`/${locale}${route === "/" ? "" : route}`,priority))
-          ]
+          return {
+               url: absoluteURL(route),
+               lastModified: new Date(),
+               changeFrequency: "weekly",
+               priority,
+               alternates: {
+                    languages: generateLocalizedPages(route)
+               }
+          }
      })
 }
