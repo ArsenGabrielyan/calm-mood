@@ -1,4 +1,7 @@
+import { languages } from "@/i18n/config";
+import { LangCodeType } from "@/i18n/types";
 import { clsx, type ClassValue } from "clsx"
+import { Metadata } from "next";
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
@@ -36,6 +39,7 @@ export function getDailyBackground(): React.CSSProperties{
     backgroundAttachment: "fixed"
   }
 }
+
 export function preloadAudio(...audioFiles: string[]) {
   const set = new Set(audioFiles);
   const arr = audioFiles.filter(([key])=>set.has(key)).map((entries)=>entries[1]);
@@ -43,4 +47,11 @@ export function preloadAudio(...audioFiles: string[]) {
     const audio = new Audio(src);
     audio.load();
   });
+}
+
+export function createMetaAlternates(locale: LangCodeType, url?: string): Metadata["alternates"] {
+  return {
+    languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}${url}`])),
+    canonical: absoluteURL(`/${locale}${url}`)
+  }
 }

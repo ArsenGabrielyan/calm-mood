@@ -1,10 +1,14 @@
 import ExerciseContent from "@/components/contents/exercise";
-import { absoluteURL } from "@/lib/utils";
+import { routing } from "@/i18n/routing";
+import { absoluteURL, createMetaAlternates } from "@/lib/utils";
 import { Metadata } from "next";
+import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}): Promise<Metadata> {
      const {locale} = await params;
+     if (!hasLocale(routing.locales, locale)) return notFound()
      const t = await getTranslations("breathingExercise");
      const appTxt = await getTranslations("index")
      return {
@@ -33,9 +37,7 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
                title: t("title"),
                description: t("description"),
           },
-          alternates: {
-               canonical: absoluteURL(`/${locale}/breathing-exercise`)
-          },
+          alternates: createMetaAlternates(locale,"/breathing-exercise"),
      }
 }
 

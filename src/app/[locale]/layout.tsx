@@ -9,7 +9,7 @@ import { getTranslations } from "next-intl/server";
 import { Toaster } from "sonner";
 import { Raleway } from "next/font/google";
 import localFont from 'next/font/local'
-import { absoluteURL, KEYWORDS } from "@/lib/utils";
+import { absoluteURL, createMetaAlternates, KEYWORDS } from "@/lib/utils";
 import { WebSite, WithContext } from 'schema-dts'
 
 const arArchy = localFont({
@@ -57,6 +57,7 @@ export interface RootLayoutProps{
 
 export async function generateMetadata({params}: RootLayoutProps): Promise<Metadata> {
   const {locale} = await params;
+  if (!hasLocale(routing.locales, locale)) return notFound()
   const t = await getTranslations("index");
   return {
     metadataBase: new URL(absoluteURL()),
@@ -65,10 +66,7 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
       template: `%s | ${t("appName")}`
     },
     description: t("appDescription"),
-    alternates: {
-      languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}`])),
-      canonical: absoluteURL(`${locale}`)
-    },
+    alternates: createMetaAlternates(locale),
     authors: {
       url: "https://github.com/ArsenGabrielyan",
       name: t("author")

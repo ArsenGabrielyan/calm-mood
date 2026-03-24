@@ -1,11 +1,15 @@
 import SoundsContent from "@/components/contents/sounds";
+import { routing } from "@/i18n/routing";
 import { sounds } from "@/lib/sounds";
-import { absoluteURL, KEYWORDS } from "@/lib/utils";
+import { absoluteURL, createMetaAlternates, KEYWORDS } from "@/lib/utils";
 import { Metadata } from "next";
+import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}): Promise<Metadata> {
      const {locale} = await params;
+     if (!hasLocale(routing.locales, locale)) return notFound()
      const t = await getTranslations("allSounds.page");
      const appTxt = await getTranslations("index")
      return {
@@ -35,9 +39,7 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
                title: t("title"),
                description: t("description"),
           },
-          alternates: {
-               canonical: absoluteURL(`/${locale}/sounds`),
-          },
+          alternates: createMetaAlternates(locale,"/sounds"),
      }
 }
 
