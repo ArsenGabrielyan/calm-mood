@@ -40,11 +40,11 @@
     },
     "breathing-exercise": {
       "time": "დროის ინტერვალი",
-      "hold": "შეკავება: {hold} წმ",
-      "breathe": "ჩასუნთქვა / ამოსუნთქვა: {breatheTime} წმ",
+      "hold": "შეკავება: {hold, number} წმ",
+      "breathe": "ჩასუნთქვა / ამოსუნთქვა: {breatheTime, number} წმ",
       "duration": "ხანგრძლივობა",
       "presets": "პრესეტი",
-      "seconds": "{seconds} წამი",
+      "seconds": "{seconds, number} წამი",
       "type": "ვარჯიშის ტიპი"
     },
     "validations": {

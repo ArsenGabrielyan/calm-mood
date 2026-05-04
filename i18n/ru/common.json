@@ -40,11 +40,11 @@
     },
     "breathing-exercise": {
       "time": "Временной период",
-      "hold": "Задержание։ {hold} сек",
-      "breathe": "Вдох / Выдох: {breatheTime} сек",
+      "hold": "Задержание։ {hold, number} сек",
+      "breathe": "Вдох / Выдох: {breatheTime, number} сек",
       "duration": "Продолжительность",
       "presets": "Подготовленный набор",
-      "seconds": "{seconds} секунды",
+      "seconds": "{seconds, plural, =1 {# секунд} other {# секунды}}",
       "type": "Вид упражнений"
     },
     "validations": {

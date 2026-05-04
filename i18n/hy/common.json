@@ -40,11 +40,11 @@
     },
     "breathing-exercise": {
       "time": "Ժամանակահատված",
-      "hold": "Պահում՝ {hold} վրկ",
-      "breathe": "Շունչ / Արտաշունչ՝ {breatheTime} վրկ",
+      "hold": "Պահում՝ {hold, number} վրկ",
+      "breathe": "Շունչ / Արտաշունչ՝ {breatheTime, number} վրկ",
       "duration": "Տևողություն",
       "presets": "Նախադրված Կարգավորումներ",
-      "seconds": "{seconds} վայրկյան",
+      "seconds": "{seconds, number} վայրկյան",
       "type": "Տեսակ"
     },
     "validations": {

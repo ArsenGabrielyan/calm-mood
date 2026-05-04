@@ -40,11 +40,11 @@
     },
     "breathing-exercise": {
       "time": "Exercise Time",
-      "hold": "Hold: {hold}s",
-      "breathe": "Breathe In / Out: {breatheTime}s",
+      "hold": "Hold: {hold, number}s",
+      "breathe": "Breathe In / Out: {breatheTime, number}s",
       "duration": "Duration",
       "presets": "Presets",
-      "seconds": "{seconds} seconds",
+      "seconds": "{seconds, plural, =1 {# second} other {# seconds}}",
       "type": "Type"
     },
     "validations": {

@@ -43,8 +43,8 @@ export default function ExerciseSettings({onSubmit, setOpen, defaultValue}: Prop
                                    <FieldLabel htmlFor="exercise-time">{t("breathing-exercise.time")}</FieldLabel>
                                    <FieldDescription>
                                         <ul>
-                                             <li>{t("breathing-exercise.hold",{hold: (holdTime/1000).toString()})}</li>
-                                             <li>{t("breathing-exercise.breathe",{breatheTime: (growTime/1000).toString()})}</li>
+                                             <li>{t("breathing-exercise.hold",{hold: holdTime/1000})}</li>
+                                             <li>{t("breathing-exercise.breathe",{breatheTime: growTime/1000})}</li>
                                         </ul>
                                    </FieldDescription>
                               </FieldContent>
@@ -68,7 +68,7 @@ export default function ExerciseSettings({onSubmit, setOpen, defaultValue}: Prop
                                    {PRESETS.map(({id, Icon, seconds})=>(
                                         <Button variant={Number(form.watch("exerciseTime"))===seconds ? "default" : "outline"} key={id} onClick={()=>form.setValue("exerciseTime",seconds.toString())} type="button">
                                              <Icon className="size-5" />
-                                             {t("breathing-exercise.seconds",{seconds: seconds.toString()})}
+                                             {t("breathing-exercise.seconds",{seconds})}
                                         </Button>
                                    ))}
                               </div>
