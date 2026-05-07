@@ -1,6 +1,6 @@
 import ExerciseContent from "@/components/contents/exercise";
 import { routing } from "@/i18n/routing";
-import { absoluteURL, createMetaAlternates } from "@/lib/utils";
+import { absoluteLink, absoluteURL, createMetaAlternates } from "@/lib/utils";
 import { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -17,7 +17,7 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
           openGraph: {
                title: t("title"),
                description: t("description"),
-               url: absoluteURL(`/${locale}/breathing-exercise`),
+               url: absoluteLink(locale,"/breathing-exercise"),
                locale,
                siteName: appTxt("appName"),
                type: "website",

@@ -3,13 +3,12 @@ import "../globals.css";
 import { ThemeProvider } from "@/components/theme-changer/theme-provider";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@/i18n/routing";
-import { languages } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Toaster } from "sonner";
 import { Raleway } from "next/font/google";
 import localFont from 'next/font/local'
-import { absoluteURL, createMetaAlternates, KEYWORDS } from "@/lib/utils";
+import { absoluteLink, absoluteURL, createMetaAlternates, KEYWORDS } from "@/lib/utils";
 import { WebSite, WithContext } from 'schema-dts'
 
 const arArchy = localFont({
@@ -122,7 +121,7 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
     openGraph: {
       title: t("appName"),
       description: t("appDescription"),
-      url: absoluteURL(`/${locale}`),
+      url: absoluteLink(locale),
       locale,
       siteName: t("appName"),
       type: "website",
@@ -166,7 +165,7 @@ export default async function RootLayout({
     '@type': 'WebSite',
     name: t("appName"),
     description: t("appDescription"),
-    url: absoluteURL(),
+    url: absoluteLink(locale),
     inLanguage: locale,
   }
   return (

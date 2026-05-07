@@ -1,7 +1,7 @@
 import SoundsContent from "@/components/contents/sounds";
 import { routing } from "@/i18n/routing";
 import { sounds } from "@/lib/sounds";
-import { absoluteURL, createMetaAlternates, KEYWORDS } from "@/lib/utils";
+import { absoluteLink, absoluteURL, createMetaAlternates, KEYWORDS } from "@/lib/utils";
 import { Metadata } from "next";
 import { hasLocale } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -19,7 +19,7 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
           openGraph: {
                title: t("title"),
                description: t("description"),
-               url: absoluteURL(`/${locale}/sounds`),
+               url: absoluteLink(locale,"/sounds"),
                locale,
                siteName: appTxt("appName"),
                type: "website",

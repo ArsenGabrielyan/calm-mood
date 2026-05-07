@@ -27,6 +27,11 @@ export const absoluteURL = (path?: string) => {
   return !path ? url : `${url}${path}`
 }
 
+export const absoluteLink = (locale: LangCodeType, path?: string) => {
+  const redirectPath = !path ? "/" : path
+  return absoluteURL(locale==="hy" ? redirectPath : `/${locale}${redirectPath}`)
+}
+
 export function getDailyBackground(): React.CSSProperties{
   const mod = Math.floor(Date.now() / (1000*60*60*24)) % 10;
   const jpg = `/images/backgrounds/bg-${mod+1}.jpg`;
@@ -52,6 +57,6 @@ export function preloadAudio(...audioFiles: string[]) {
 export function createMetaAlternates(locale: LangCodeType, url?: string): Metadata["alternates"] {
   return {
     languages: Object.fromEntries(languages.map(l => [l.code, `/${l.code}${url}`])),
-    canonical: absoluteURL(`/${locale}${url}`)
+    canonical: absoluteLink(locale,url)
   }
 }

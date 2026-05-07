@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
-import { absoluteURL } from "@/lib/utils";
+import { absoluteLink, absoluteURL } from "@/lib/utils";
 
 export default function Sitemap(): MetadataRoute.Sitemap{
      const routes = [
@@ -20,7 +20,7 @@ export default function Sitemap(): MetadataRoute.Sitemap{
                          "x-default": absoluteURL(route),
                          ...Object.fromEntries(locales.map((locale) => [
                               locale,
-                              absoluteURL(locale === "hy" ? route : `/${locale}${route}`)
+                              absoluteLink(locale,route)
                          ])
                    )}
                }
