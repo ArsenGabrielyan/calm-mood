@@ -1,4 +1,46 @@
 import PomodoroContent from "@/components/contents/pomodoro";
+import { routing } from "@/i18n/routing";
+import { absoluteLink, absoluteURL, createMetaAlternates, KEYWORDS } from "@/lib/utils";
+import { Metadata } from "next";
+import { hasLocale } from "next-intl";
+import { getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+
+export async function generateMetadata({params}: {params: Promise<{locale: string}>}): Promise<Metadata> {
+     const {locale} = await params;
+     if (!hasLocale(routing.locales, locale)) return notFound()
+     const t = await getTranslations("pomodoro");
+     const appTxt = await getTranslations("index")
+     return {
+          title: t("title"),
+          description: t("description"),
+          keywords: ["pomodoro","pomodoro method","work and rest without burnout","pomodoro timer",...KEYWORDS],
+          openGraph: {
+               title: t("title"),
+               description: t("description"),
+               url: absoluteLink(locale,"/pomodoro"),
+               locale,
+               siteName: appTxt("appName"),
+               type: "website",
+               images: {
+                    url: absoluteURL(appTxt("og-image")),
+                    width: 1200,
+                    height: 630
+               }
+          },
+          twitter: {
+               images: [{
+                    url: absoluteURL(appTxt("og-image")),
+                    width: 1200,
+                    height: 630
+               }],
+               card: "summary_large_image",
+               title: t("title"),
+               description: t("description"),
+          },
+          alternates: createMetaAlternates(locale,"/pomodoro"),
+     }
+}
 
 export default function PomodoroPage(){
      return (

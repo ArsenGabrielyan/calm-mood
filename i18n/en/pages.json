@@ -1,6 +1,7 @@
 {
      "pomodoro": {
           "title": "Pomodoro Method",
+          "description": "Control work and break times by following a timer while working!",
           "phase": {
                "focus": "Focus",
                "long-break": "Long Break",
