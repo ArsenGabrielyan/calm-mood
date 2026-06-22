@@ -22,5 +22,10 @@
                "title": "Multilingual UI",
                "description": "Use it in Armenian, English, Russian, or Georgian languages. More languages will be added soon."
           }
+     },
+     "download": {
+          "title": "Download Calm Mood Desktop",
+          "desc": "A simple desktop app designed to help calm your mind with soothing sounds and breathing exercises. Lightweight and distraction-free.",
+          "button": "Download Now"
      }
 }
