@@ -4,7 +4,7 @@ All notable changes to Calm Mood will be documented here.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
-## 2.0.3 - 2026-06-22
+## 2.0.3 - 2026-07-06
 
 ### Added
 - Downloads Section linking to the Calm Mood Desktop
