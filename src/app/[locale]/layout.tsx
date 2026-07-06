@@ -148,7 +148,7 @@ export async function generateMetadata({params}: RootLayoutProps): Promise<Metad
 }
 
 export const viewport: Viewport = {
-  themeColor: "#2d5e0d"
+  themeColor: "#466934"
 }
 
 export default async function RootLayout({
