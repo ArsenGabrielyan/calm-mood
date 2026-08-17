@@ -70,6 +70,7 @@ reconnecting with nature in a new way. Visit the [Website][website-url] to try i
 - [![Tailwind CSS][tailwind-shield]][tailwind-url]
 - [![TypeScript][typescript-shield]][typescript-url]
 - [![Vercel][vercel-shield]][vercel-url]
+- [![React][react-shield]][react-url]
 
 ## Usage
 1. Visit [Calm Mood][website-url] and explore:
@@ -132,6 +133,8 @@ Distributed under the MIT License. See [LICENSE.md][license-url] for more inform
 [typescript-url]: https://www.typescriptlang.org
 [vercel-shield]: https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
 [vercel-url]: https://vercel.com/
+[react-shield]: https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB
+[react-url]: https://react.dev/
 
 <!-- Screenshots -->
 [exercise-screenshot]: ./.github/demo-exercise.png
